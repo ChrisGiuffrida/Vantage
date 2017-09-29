@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vantage</title>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Our CSS -->
+	<link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid px-lg-5 mx-lg-5">
+		<div class="jumbotron my-3">
+			<h1>Vantage</h1>
+			<h2>CSE 30246</h2>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Relational Schema</h2>
+				<p class="card-text">
+					Users(<span class="u">netid</span>, usage)<br>
+					Students(<span class="u">netid</span>, usage, major, year)<br>
+					Professors(<span class="u">netid</span>, usage, department)<br>
+					Courses(<span class="u">crn</span>, major, title)<br>
+					Machines(<span class="u">name</span>, CPU usage, memory)<br>
+					Processes(<span class="u">pid</span>, what)<br>
+					Sessions(<span class="u">time stamp</span>, IP)	
+				</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Database/Platform/Language Choice</h2>
+				<p class="card-text">We will use the default tools, namely mySQL as our database, PHP as our primary backend language, Python as our scripting language, and HTML, CSS and JavaScript/jQuery as our frontend.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Data Sources</h2>
+				<p class="card-text">We will get data for our application by writing Python scripts that will be automated and run on the student machines periodically using cron jobs.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Division of Labor</h2>
+				<p class="card-text">We plan on having Brandon and Chris work on the scripts that collect the data, while Anthony and Thomas work on the front end. We will all work on the database portion, as this is a database course and we all want to know how it works.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Project Timeline</h2>
+				<ul class="list-group">
+					<li class="list-group-item"><em>October 6: </em>&ensp;Setup development environment</li>
+					<li class="list-group-item"><em>October 26: </em>&ensp;Complete scripts to begin data collection</li>
+					<li class="list-group-item"><em>November 1: </em>&ensp;Complete frontend interface for initial demo</li>
+					<li class="list-group-item"><em>November 30: </em>&ensp;Complete one advanced function</li>
+					<li class="list-group-item"><em>December 8: </em>&ensp;Complete both advanced functions</li>
+					<li class="list-group-item"><em>December 15: </em>&ensp;Complete video for final demo and report</li>
+				</ul>
+			</div>
+		</div>
+
+	</div> <!-- /.container-fluid -->
+
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<!-- Tether.io JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
+

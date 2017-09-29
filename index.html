@@ -1,43 +1,66 @@
 <!DOCTYPE html>
-	<html lang="en">
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vantage</title>
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i" rel="stylesheet">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Our CSS -->
+	<link href="./style.css" rel="stylesheet">
 </head>
 
-<body style="font-family: 'Ubuntu', -apple-system, 'Segoe UI', 'Helvetica Neue', 'Helvetica',  sans-serif; margin-left: 250px; margin-right: 250px">
-	<div>
-	    <h1>Vantage</h1>
-	</div>
-	<div>
-	    <h2 style="margin-bottom: 1cm;">CSE 30246</h2>
-        </div>
-	<div>
+<body>
+	<div class="container-fluid px-lg-5 mx-lg-5">
+		<div class="jumbotron my-3">
+			<h1>Vantage</h1>
+			<h2>CSE 30246</h2>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Application Domain</h2>
+				<p class="card-text">Vantage is an application that provides a comprehensive overview of the remote machines available to students within the Notre Dame network, namely the CSE student machines and the CRC machines. Using Vantage, users will be able to get historical, detailed analysis of the use of computing resources, as well summary reports via email and/or slack. Advanced search functionality will allow administrators to view statistics based on individual users, given dates, etc.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Usefulness</h2>
+				<p class="card-text">Currently, there are no web applications that provide real-time and historical data on the usage of remote machines on Notre Dame's network. This information would be helpful for administrators, professors, and even students, allowing them to understand who is using the resources and for what purpose.  Furthermore, CSE professors have shown an interest in having this type of application available to them.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Realness</h2>
+				<p class="card-text">We plan on writing several scripts that gather important data on the student machines and then write it to our database. The scripts will run periodically using cron jobs (say every 5 minutes). If these scripts begin running by early October, we will have two months worth of historical data to use in our application.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">Planned Functionality</h2>
+				<hr>
+				<p class="card-text"><strong>Basic Functions:</strong>  Vantage will support the ability to insert, delete, and update records in the database.  Most of this functionality will be utilized by our scripts that gather the data from the machines.</p>
+				<hr>
+				<p class="card-text"><strong>Advanced Functions:</strong> First, Vantage will have an algorithm that uses the historical data to predict when resources are under the greatest strain, allowing users to have the insights needed to log in to different machines or do work at different times.  Second, Vantage will generate a weekly report that summarizes remote machine usage.  This feature will give the people in charge of monitoring the computing resources the information they need in a convenient way.</p>
+			</div>
+		</div>
+		<div class="card p-3 mb-3">
+			<div class="card-body">
+				<h2 class="card-title">ER Diagram</h2>
+				<hr>
+				<a href="./er.png" class="btn btn-primary">View ER Diagram</a>
+			</div>
+		</div>
 
-		<h2 style="font-weight: normal; margin-top: 50px">Application Domain</h2>
-                 
-			    <h4 style="font-weight: normal">Vantage is an application that provides a comprehensive overview of the remote machines available to students within the Notre Dame network, namely the CSE student machines and the CRC machines.  Using Vantage, users will be able to get historical, detailed analysis of the use of computing resources, as well summary reports via email and/or slack.  Advanced search functionality will allow administrators to view statistics based on individual users, given dates, etc.</h4></b>
-		        
-		  
-		    <h2 style="font-weight: normal; margin-top: 50px">Usefulness</h2>
-                       <h4 style="font-weight: normal">Currently, there are no web applications that provide real-time and historical data on the usage of remote machines on Notre Dame's network.  This information would be helpful for administrators, professors, and even students, allowing them to understand who is using the resources and for what purpose.  Furthermore, CSE professors have shown an interest in having this type of application available to them.</h4></b>
-		       <h2 style="font-weight: normal; margin-top: 50px">Realness</h2>
-		         <h4 style="font-weight: normal">We plan on writing several scripts that gather important data on the student machines and then write it to our database.  The scripts will run periodically using cron jobs (say every 5 minutes).  If these scripts begin running by early October, we will have two months worth of historical data to use in our application.</h4></b>
-		  
-		    <h2 style="font-weight: normal; margin-top: 50px">Planned Functionality</h2>
-			<h4 style="font-weight: normal">Basic Functions:  Vantage will support the ability to insert, delete, and update records in the database.  Most of this functionality will be utilized by our scripts that gather the data from the machines. </h4></b>
-		      	<h4 style="font-weight: normal">Advanced Functions:  First, Vantage will have an algorithm that uses the historical data to predict when resources are under the greatest strain, allowing users to have the insights needed to log in to different machines or do work at different times.  Second, Vantage will generate a weekly report that summarizes remote machine usage.  This feature will give the people in charge of monitoring the computing resources the information they need in a convenient way.</h4>
-              
-		</li>
+	</div> <!-- /.container-fluid -->
 
-	</div>
-	<div>
-	    <h2 style="font-weight: normal; margin-top: 50px">ER Diagram</h2>
-	        <ul>
-		      <li>
-			    <b><a href="./er.png">View ER Diagram<a><b>
-	              </li>
-	        </ul>
-	</div>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<!-- Tether.io JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
 
-</div>
