@@ -44,7 +44,7 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
+            <!-- <div class="profile clearfix">
               <div class="profile_pic">
                 <img src="images/user.png" alt="..." class="img-circle profile_img">
               </div>
@@ -52,7 +52,7 @@
                 <span>Welcome,</span>
                 <h2>John Doe</h2>
               </div>
-            </div>
+            </div> -->
             <!-- /menu profile quick info -->
 
             <br />
@@ -152,11 +152,11 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li>
+                    <!-- <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li> -->
                     <li>
                       <a href="javascript:;">
                         <!-- <span class="badge bg-red pull-right">50%</span> -->
-                        <i class="fa fa-cog fa-fw"></i><span>  Settings</span>
+                        <i class="fa fa-cog fa-fw"></i><span>  Account Settings</span>
                       </a>
                     </li>
                     <li><a href="javascript:;"><i class="fa fa-question fa-fw"></i>  Help</a></li>
@@ -164,7 +164,7 @@
                   </ul>
                 </li>
 
-                <li role="presentation" class="dropdown">
+                <!-- <li role="presentation" class="dropdown">
                   <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-envelope-o"></i>
                     <span class="badge bg-green">6</span>
@@ -227,7 +227,7 @@
                       </div>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
@@ -271,7 +271,7 @@
           </div>
           <!-- /top tiles -->
 
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="dashboard_graph">
 
@@ -340,7 +340,135 @@
             </div>
 
           </div>
-          <br />
+          <br /> -->
+
+          <!-- OUR GRAPHS! -->
+          <div class="row">
+              <div class="col-sm-3 col-xs-6">
+                <div class="x_panel tile">
+                  <div class="x_title">
+                    <h2>Student 00</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content text-center">
+                    <canvas id="chart_gauge_00" width="200" height="100" style="width: 210px; height: 110px"></canvas>
+                    <div class="goal-wrapper">
+                      <span id="gauge-text-00" class="gauge-value pull-left">0</span>
+                      <span class="gauge-value pull-left">%</span>
+                      <span id="goal-text" class="goal-value pull-right">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <div class="x_panel tile">
+                  <div class="x_title">
+                    <h2>Student 01</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content text-center">
+                    <canvas id="chart_gauge_01" width="200" height="100" style="width: 210px; height: 110px"></canvas>
+                    <div class="goal-wrapper">
+                      <span id="gauge-text-01" class="gauge-value pull-left">0</span>
+                      <span class="gauge-value pull-left">%</span>
+                      <span id="goal-text" class="goal-value pull-right">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <div class="x_panel tile">
+                  <div class="x_title">
+                    <h2>Student 02</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content text-center">
+                    <canvas id="chart_gauge_02" width="200" height="100" style="width: 210px; height: 110px"></canvas>
+                    <div class="goal-wrapper">
+                      <span id="gauge-text-02" class="gauge-value pull-left">0</span>
+                      <span class="gauge-value pull-left">%</span>
+                      <span id="goal-text" class="goal-value pull-right">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <div class="x_panel tile">
+                  <div class="x_title">
+                    <h2>Student 03</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content text-center">
+                    <canvas id="chart_gauge_03" width="200" height="100" style="width: 210px; height: 110px"></canvas>
+                    <div class="goal-wrapper">
+                      <span id="gauge-text-03" class="gauge-value pull-left">0</span>
+                      <span class="gauge-value pull-left">%</span>
+                      <span id="goal-text" class="goal-value pull-right">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
 
           <div class="row">
 

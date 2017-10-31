@@ -7,8 +7,6 @@
  * });
  */
 
-// A change was made...
-
 (function($,sr){
     // debouncing function from John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
@@ -765,38 +763,60 @@ if (typeof NProgress != 'undefined') {
 	  };
 		
 		
+		if ($('#chart_gauge_00').length){ 
+		
+			var chart_gauge_00_elem = document.getElementById('chart_gauge_00');
+			var chart_gauge_00 = new Gauge(chart_gauge_00_elem).setOptions(chart_gauge_settings);
+		}	
+		
+		if ($('#gauge-text-00').length){ 
+		
+			chart_gauge_00.maxValue = 6000;
+			chart_gauge_00.animationSpeed = 32;
+			chart_gauge_00.set(5000);
+			chart_gauge_00.setTextField(document.getElementById("gauge-text-00"));
+		}
+	
 		if ($('#chart_gauge_01').length){ 
 		
 			var chart_gauge_01_elem = document.getElementById('chart_gauge_01');
 			var chart_gauge_01 = new Gauge(chart_gauge_01_elem).setOptions(chart_gauge_settings);
-			
 		}	
 		
-		
-		if ($('#gauge-text').length){ 
+		if ($('#gauge-text-01').length){ 
 		
 			chart_gauge_01.maxValue = 6000;
 			chart_gauge_01.animationSpeed = 32;
-			chart_gauge_01.set(5000);
-			chart_gauge_01.setTextField(document.getElementById("gauge-text"));
-		
+			chart_gauge_01.set(2000);
+			chart_gauge_01.setTextField(document.getElementById("gauge-text-01"));
 		}
-		
-		if ($('#chart_gauge_02').length){
+	
+		if ($('#chart_gauge_02').length){ 
 		
 			var chart_gauge_02_elem = document.getElementById('chart_gauge_02');
 			var chart_gauge_02 = new Gauge(chart_gauge_02_elem).setOptions(chart_gauge_settings);
-			
-		}
+		}	
 		
+		if ($('#gauge-text-02').length){ 
 		
-		if ($('#gauge-text2').length){
-			
-			chart_gauge_02.maxValue = 9000;
+			chart_gauge_02.maxValue = 6000;
 			chart_gauge_02.animationSpeed = 32;
-			chart_gauge_02.set(2400);
-			chart_gauge_02.setTextField(document.getElementById("gauge-text2"));
+			chart_gauge_02.set(3000);
+			chart_gauge_02.setTextField(document.getElementById("gauge-text-02"));
+		}
+	
+		if ($('#chart_gauge_03').length){ 
 		
+			var chart_gauge_03_elem = document.getElementById('chart_gauge_03');
+			var chart_gauge_03 = new Gauge(chart_gauge_03_elem).setOptions(chart_gauge_settings);
+		}	
+		
+		if ($('#gauge-text-03').length){ 
+		
+			chart_gauge_03.maxValue = 6000;
+			chart_gauge_03.animationSpeed = 32;
+			chart_gauge_03.set(1000);
+			chart_gauge_03.setTextField(document.getElementById("gauge-text-03"));
 		}
 	
 	
