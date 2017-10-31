@@ -7,7 +7,7 @@
  * });
  */
 
-// Git please work!
+// A change was made...
 
 (function($,sr){
     // debouncing function from John Hann
