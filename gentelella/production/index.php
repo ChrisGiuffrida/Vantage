@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +42,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-rebel"></i> <span>Vantage</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-rebel"></i> <span>Vantage</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,7 +54,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
+                  <li><a href="index.php"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
                   </li>
                   <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -119,7 +123,8 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt="">John Doe
+                    <img src="images/user.png" alt="">
+                    <?php echo $_SESSION["first"] . " " . $_SESSION["last"]; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -131,7 +136,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;"><i class="fa fa-question fa-fw"></i>  Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
+                    <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
                   </ul>
                 </li>
               </ul>

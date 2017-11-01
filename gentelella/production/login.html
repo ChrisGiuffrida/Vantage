@@ -49,7 +49,7 @@
                   </div>
                 </div>
               <div>
-                <a class="btn btn-default btn-block submit" href="index.html">Log In</a>
+                <a class="btn btn-default btn-block submit" href="index.php">Log In</a>
                 <!-- <a class="reset_pass" href="#">Lost your password?</a> -->
               </div>
 
@@ -74,37 +74,49 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form method="POST" action="sign-up.php">
               <h1>Join Vantage today.</h1>
               <div class="row">
                 <div class="col-xs-6 form-group has-feedback">
-                  <input type="text" class="form-control has-feedback-left" placeholder="First" required="" />
-                  <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  <input name="first" type="text" class="form-control has-feedback-left" placeholder="First" required="" />
+                  <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                 </div>
                 <div class="col-xs-6 form-group">
-                  <input type="text" class="form-control" placeholder="Last" required="" />
+                  <input name="last" type="text" class="form-control" placeholder="Last" required="" />
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input type="email" class="form-control has-feedback-left" placeholder="Email" required="" />
+                  <input name="netid" type="text" class="form-control has-feedback-left" placeholder="netID" required="" />
+                  <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 form-group has-feedback">
+                  <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="" />
                   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
+                  <input name="phone" type="text" class="form-control has-feedback-left" placeholder="Phone Number" required="" />
+                  <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 form-group has-feedback">
+                  <input name="password" type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
                   <span class="fa fa-key form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input type="password" class="form-control has-feedback-left" placeholder="Confirm Password" required="" />
+                  <input name="password-confirm" type="password" class="form-control has-feedback-left" placeholder="Confirm Password" required="" />
                   <span class="fa fa-repeat form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div>
-                <a class="btn btn-default btn-block submit" href="index.html">Sign Up</a>
+                <button class="btn btn-default btn-block submit" type="submit" name="submit">Sign Up</button>
                 <span class="fa form-control-feedback" aria-hidden="true"></span>
               </div>
 
