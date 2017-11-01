@@ -33,23 +33,23 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form method="POST" action="log-in.php">
               <h1>Log in to Vantage.</h1>
               <div class="row">
                   <div class="col-xs-12 form-group has-feedback">
-                    <input type="text" class="form-control has-feedback-left" placeholder="Username" required="" />
-                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                    <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="" />
+                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>
               <div>
               <div class="row">
                   <div class="col-xs-12 form-group has-feedback">
-                      <input type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
+                      <input name="password" type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
                     <span class="fa fa-key form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>
               <div>
-                <a class="btn btn-default btn-block submit" href="index.php">Log In</a>
+                <button class="btn btn-default btn-block submit" type="submit">Log In</button>
                 <!-- <a class="reset_pass" href="#">Lost your password?</a> -->
               </div>
 

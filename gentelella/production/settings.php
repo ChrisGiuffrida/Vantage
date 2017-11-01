@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -120,19 +123,20 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt="">John Doe
+                    <img src="images/user.png" alt="">
+                    <?php echo $_SESSION["first"] . " " . $_SESSION["last"]; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <!-- <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li> -->
                     <li>
-                      <a href="settings.html">
+                      <a href="settings.php">
                         <!-- <span class="badge bg-red pull-right">50%</span> -->
                         <i class="fa fa-cog fa-fw"></i><span>  Settings</span>
                       </a>
                     </li>
                     <li><a href="javascript:;"><i class="fa fa-question fa-fw"></i>  Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
+                    <li><a href="log-out.php"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
                   </ul>
                 </li>
 
@@ -178,7 +182,7 @@
                     </div>
                     <div class="x_content">
                       <br />
-                      <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                      <form id="update" data-parsley-validate class="form-horizontal form-label-left">
   
                         <div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name 
@@ -236,6 +240,7 @@
                       </div>
                       <div class="x_content">
                         <br />
+                        <form id="delete" method="POST" action="delete-account.php" data-parsley-validate class="form-horizontal form-label-left">
                           <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                               <button type="submit" class="btn btn-danger">Delete Account</button>

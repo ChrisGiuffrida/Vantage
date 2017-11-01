@@ -130,13 +130,13 @@
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <!-- <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li> -->
                     <li>
-                      <a href="settings.html">
+                      <a href="settings.php">
                         <!-- <span class="badge bg-red pull-right">50%</span> -->
                         <i class="fa fa-cog fa-fw"></i><span>  Account Settings</span>
                       </a>
                     </li>
                     <li><a href="javascript:;"><i class="fa fa-question fa-fw"></i>  Help</a></li>
-                    <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
+                    <li><a href="log-out.php"><i class="fa fa-sign-out fa-fw"></i>  Log Out</a></li>
                   </ul>
                 </li>
               </ul>
