@@ -81,6 +81,8 @@ for host in hosts:
 
 	print host + " " + str(total_cpu_percent) + " " + str(total_mem_percent) + " " + str(up_data)
 
+
+	'''
 	
 	#Insert into the machine table in the database
 	sql_command = "INSERT INTO MachineSnapshots VALUES(\"" +  host + "\", now(), " + str(total_cpu_percent) + ", " + str(total_mem_percent) + ", " + str(up_data) + ")"
@@ -92,8 +94,16 @@ for host in hosts:
 		sql_command = "INSERT INTO Processes VALUE(" + str(row[1]) + ", now(), \"" + host + "\", " + str(row[2]) + ", " + str(row[3]) + ", " + str(row[5]) + ", " + str(row[4]) + ", \"" +  str(row[0]) + "\", \"" +  str(row[10]) + "\", \"" + str(row[8]) + "\")"
 		cursor.execute(sql_command)
 		db.commit()	
-
+	'''
 	#Insert into the session table in the database
+	# Mostly working with the 'who' command
+	# netid, data, login timestamp, sttudent machine (host), iphost
+	# We need to make sure this specific session isnt in the table already
+	# Login time is given in the datetime format, need to concatenate
+	for line in who_data:
+		logtime = line[2] + " " +  line[3]
+		sql_command = "INSERT INTO Sessions VALUE(\"" + line[0] + "\" , now(), '" + logtime + "', \"" + host + "\", \"" + line[4] + "\")"
+		print sql_command	
 
 
 	#Insert into the disc table in the database
