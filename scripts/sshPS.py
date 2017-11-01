@@ -102,8 +102,13 @@ for host in hosts:
 	# Login time is given in the datetime format, need to concatenate
 	for line in who_data:
 		logtime = line[2] + " " +  line[3]
-		sql_command = "INSERT INTO Sessions VALUE(\"" + line[0] + "\" , now(), '" + logtime + "', \"" + host + "\", \"" + line[4] + "\")"
-		print sql_command	
+
+		sql_command = "INSERT INTO Sessions (netid, timestamp, logintime, machine, host) VALUES (\"" + line[0] + "\" , now(), '" + logtime + "', \"" + host + "\", \"" + line[4] + "\")"
+		try:
+			cursor.execute(sql_command)
+			db.commit()
+		except:
+			print('Error' + sql_command)
 
 
 	#Insert into the disc table in the database
