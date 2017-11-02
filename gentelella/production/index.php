@@ -1,5 +1,6 @@
 <?php
-  session_start();
+require("verify_session.php");
+require("summary.php");
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +62,7 @@
                       <li><a href="#">student00</a></li>
                       <li><a href="#">student01</a></li>
                       <li><a href="#">student02</a></li>
-                      <li><a href="#">student03</a></li>
+                      <li><a href="#">student04</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
@@ -91,11 +92,6 @@
               <div class="menu_section">
                 <h3>Information</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-user"></i>Account<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="login.html">Log In</a></li>
-                      <li><a href="login.html#signup">Sign Up</a></li>
-                    </ul>
                   <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#">Brandon Fite</a></li>
@@ -150,34 +146,34 @@
           <!-- top tiles -->
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+              <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
               <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+              <span class="count_bottom"><i class="green">4% </i> From yesterday</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+              <span class="count_top"><i class="fa fa-file-code-o"></i> Total Processes</span>
               <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From yesterday</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+              <span class="count_top"><i class="fa fa-sign-in"></i> Total Logins</span>
               <div class="count green">2,500</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+              <span class="count_top"><i class="fa fa-laptop"></i> Total Devices</span>
               <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From yesterday</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+              <span class="count_top"><i class="fa fa-file-code-o"></i> Your Processes</span>
               <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+              <span class="count_top"><i class="fa fa-sign-in"></i> Your Logins</span>
               <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
             </div>
           </div>
 

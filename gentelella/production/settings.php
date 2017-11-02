@@ -1,6 +1,5 @@
 <?php
-  session_start();
-  // require("get_account_info.php");
+    require("verify_session.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

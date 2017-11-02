@@ -2,10 +2,8 @@
 session_start();
 require("connect.php");
 
-echo "Before IF";
 /* create a prepared statement */
-if ($stmt = mysqli_prepare($link, "UPDATE users SET first=? last=? email=? phone=? WHERE netid=?")) {
-    echo "Inside IF";
+if ($stmt = mysqli_prepare($link, "UPDATE Users SET first_name=?, last_name=?, email=?, phone=? WHERE netid=?")) {
     /* bind parameters for markers */
     $netid = $_SESSION["netid"];
     $first = $_POST["first"];
@@ -29,11 +27,6 @@ if ($stmt = mysqli_prepare($link, "UPDATE users SET first=? last=? email=? phone
 /* close connection */
 mysqli_close($link);
 
-echo $_SESSION["first"];
-echo $_SESSION["last"];
-echo $_SESSION["email"];
-echo $_SESSION["phone"];
-
-// header('Location: ./settings.php');
+header('Location: ./settings.php');
 
 ?>

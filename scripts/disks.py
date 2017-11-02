@@ -28,7 +28,10 @@ for host in hosts:
 	print
 	client = paramiko.SSHClient()
 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	client.connect(host, port, username, base64.b64decode(password))
+        try:
+	    client.connect(host, port, username, base64.b64decode(password))
+        except:
+            print("failed to connect")
 
 	# Execute df command
 	df_data = []
