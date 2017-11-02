@@ -1,5 +1,6 @@
 <?php
   session_start();
+  // require("get_account_info.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Vantage</title>
+    <title>Vantage // Settings</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -182,26 +183,33 @@
                     </div>
                     <div class="x_content">
                       <br />
-                      <form id="update" data-parsley-validate class="form-horizontal form-label-left">
+                      <form id="update" data-parsley-validate method="POST" action="update-account.php" class="form-horizontal form-label-left">
   
                         <div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name 
                           </label>
                           <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                            <input name="first" value="<?php echo $_SESSION["first"]?>" type="text" id="first" required="required" class="form-control col-md-7 col-xs-12">
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name 
                           </label>
                           <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                            <input name="last" value="<?php echo $_SESSION["last"]; ?>" type="text" id="last" required="required" class="form-control col-md-7 col-xs-12">
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
                           <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="email" class="form-control col-md-7 col-xs-12" type="text" name="email">
+                            <input name="email" value="<?php echo $_SESSION["email"]; ?>" id="email" class="form-control col-md-7 col-xs-12" type="email" required="required">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone">Phone 
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input name="phone" value="<?php echo $_SESSION["phone"]; ?>" type="text" id="phone" required="required" class="form-control col-md-7 col-xs-12">
                           </div>
                         </div>
                         <div class="ln_solid"></div>

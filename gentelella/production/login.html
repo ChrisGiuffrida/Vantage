@@ -37,14 +37,14 @@
               <h1>Log in to Vantage.</h1>
               <div class="row">
                   <div class="col-xs-12 form-group has-feedback">
-                    <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="" />
+                    <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="required" />
                     <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>
               <div>
               <div class="row">
                   <div class="col-xs-12 form-group has-feedback">
-                      <input name="password" type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
+                      <input name="password" type="password" class="form-control has-feedback-left" placeholder="Password" required="required" />
                     <span class="fa fa-key form-control-feedback left" aria-hidden="true"></span>
                   </div>
                 </div>
@@ -78,40 +78,40 @@
               <h1>Join Vantage today.</h1>
               <div class="row">
                 <div class="col-xs-6 form-group has-feedback">
-                  <input name="first" type="text" class="form-control has-feedback-left" placeholder="First" required="" />
+                  <input name="first" type="text" class="form-control has-feedback-left" placeholder="First" required="required" />
                   <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                 </div>
                 <div class="col-xs-6 form-group">
-                  <input name="last" type="text" class="form-control" placeholder="Last" required="" />
+                  <input name="last" type="text" class="form-control" placeholder="Last" required="required" />
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input name="netid" type="text" class="form-control has-feedback-left" placeholder="netID" required="" />
+                  <input name="netid" type="text" class="form-control has-feedback-left" placeholder="netID" required="required" />
                   <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="" />
+                  <input name="email" type="email" class="form-control has-feedback-left" placeholder="Email" required="required" />
                   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 form-group has-feedback">
-                  <input name="phone" type="text" class="form-control has-feedback-left" placeholder="Phone Number" required="" />
+                  <input name="phone" type="text" class="form-control has-feedback-left" placeholder="Phone Number" required="required" />
                   <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-12 form-group has-feedback">
-                  <input name="password" type="password" class="form-control has-feedback-left" placeholder="Password" required="" />
+                <div class="col-xs-12 form-group has-feedback"> <!-- TODO: data-validate-length below -->
+                  <input name="password" type="password" data-validate-length="6,22" class="form-control has-feedback-left" placeholder="Password" required="required" />
                   <span class="fa fa-key form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-12 form-group has-feedback">
-                  <input name="password-confirm" type="password" class="form-control has-feedback-left" placeholder="Confirm Password" required="" />
+                <div class="col-xs-12 form-group has-feedback"> <!-- TODO: data-validate-linked below -->
+                  <input name="password-confirm" type="password" data-validate-linked="password" class="form-control has-feedback-left" placeholder="Confirm Password" required="required" />
                   <span class="fa fa-repeat form-control-feedback left" aria-hidden="true"></span>
                 </div>
               </div>

@@ -1,3 +1,14 @@
+// OUR JS
+
+$(document).ready(function() {
+	$("input#phone").change(function(){
+		$("input#phone").attr("value", $("input#phone").val());
+		console.log($("input#phone").attr("value"));
+	})
+});
+
+
+
 /**
  * Resize function without multiple trigger
  * 
@@ -153,6 +164,7 @@ $MENU_TOGGLE.on('click', function() {
 
 // Panel toolbox
 $(document).ready(function() {
+		
     $('.collapse-link').on('click', function() {
         var $BOX_PANEL = $(this).closest('.x_panel'),
             $ICON = $(this).find('i'),

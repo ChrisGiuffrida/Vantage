@@ -2,7 +2,7 @@
 // Connecting, selecting database
 require('connect.php');
 /* create a prepared statement */
-if ($stmt = mysqli_prepare($link, "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?)")) {
+if ($stmt = mysqli_prepare($link, "INSERT INTO Users VALUES (?, ?, ?, ?, ?, ?)")) {
     /* bind parameters for markers */
     $first = $_POST['first'];
     $last = $_POST['last'];
@@ -24,6 +24,8 @@ session_start();
 $_SESSION["netid"] = $netid;
 $_SESSION["first"] = $first;
 $_SESSION["last"] = $last;
+$_SESSION["email"] = $email;
+$_SESSION["phone"] = $phone;
 
 header('Location: ./index.php');
 ?>
