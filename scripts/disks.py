@@ -44,4 +44,4 @@ for host in hosts:
 	#Insert into the disc table in the database
 
 	
-client.close()
+        client.close()

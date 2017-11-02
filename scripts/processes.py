@@ -86,10 +86,13 @@ for host in hosts:
 	
 	#Insert into the process table in the database
 	for row in ps_data[1:]:
-		sql_command = "INSERT INTO Processes VALUE(" + str(row[1]) + ", curdate(), curtime(), \"" + host + "\", " + str(row[2]) + ", " + str(row[3]) + ", " + str(row[5]) + ", " + str(row[4]) + ", \"" +  str(row[0]) + "\", \"" +  str(row[10]) + "\", \"" + str(row[8]) + "\")"
-                print sql_command
-		cursor.execute(sql_command)
-		db.commit()	
+                if row[8][0].isdigit():
+                    sql_command = "INSERT INTO Processes VALUE(" + str(row[1]) + ", curdate(), curtime(), \"" + host + "\", " + str(row[2]) + ", " + str(row[3]) + ", " + str(row[5]) + ", " + str(row[4]) + ", \"" +  str(row[0]) + "\", \"" +  str(row[10]) + "\", \"" + str(row[8]) + "\")"
+                    try:
+                        cursor.execute(sql_command)
+                        db.commit()	
+                    except:
+                        print("not unique")
 
+        client.close()
 	
-client.close()

@@ -52,4 +52,4 @@ for host in hosts:
 	db.commit()
 
 	
-client.close()
+        client.close()
