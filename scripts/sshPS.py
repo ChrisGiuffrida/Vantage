@@ -69,32 +69,28 @@ for host in hosts:
 	# Execute the uptime command
 	up_data = 0
 	stdin, stdout, stderr = client.exec_command('uptime')
-	# Split the data by spaces
-	up_data = (int(stdout.readlines()[0].split()[2]))
-	  
-	#Calculate CPU% and Mem%
-	total_cpu_percent = 0
-	total_mem_percent = 0
-	for row in ps_data[1:]:
-	    total_cpu_percent += float(row[2])
-	    total_mem_percent += float(row[3])
+	for line in stdout.readlines():
+	    # Split the data by spaces
+	    up_data = line.split()
+            up_data[9] = up_data[9][:-1]
+        
+        # Exeecute the free command
+        data = []
+	stdin, stdout, stderr = client.exec_command('free')
+	for line in stdout.readlines():
+	    # Split the data by spaces
+	    data.append(line.split())
+        free_data = data[1]
 
-	print host + " " + str(total_cpu_percent) + " " + str(total_mem_percent) + " " + str(up_data)
 
 
-	'''
 	
-	#Insert into the machine table in the database
-	sql_command = "INSERT INTO MachineSnapshots VALUES(\"" +  host + "\", now(), " + str(total_cpu_percent) + ", " + str(total_mem_percent) + ", " + str(up_data) + ")"
-	cursor.execute(sql_command)
-	db.commit()
-
+	'''
 	#Insert into the process table in the database
 	for row in ps_data[1:]:
 		sql_command = "INSERT INTO Processes VALUE(" + str(row[1]) + ", now(), \"" + host + "\", " + str(row[2]) + ", " + str(row[3]) + ", " + str(row[5]) + ", " + str(row[4]) + ", \"" +  str(row[0]) + "\", \"" +  str(row[10]) + "\", \"" + str(row[8]) + "\")"
 		cursor.execute(sql_command)
 		db.commit()	
-	'''
 	#Insert into the session table in the database
 	# Mostly working with the 'who' command
 	# netid, data, login timestamp, sttudent machine (host), iphost
@@ -110,7 +106,12 @@ for host in hosts:
 		except:
 			print('Error' + sql_command)
 
+	'''
 
+        for row in df_data[1:]:
+		sql_command = "INSERT INTO Disks  VALUES (\"" + row[5] + "\" , now(), \"" + host + "\", \"" + row[1] + "\", \"" + row[2] + "\", \"" + row[3] + "\", \"" + row[4][:-1] + "\")"
+                cursor.execute(sql_command)
+                db.commit()
 	#Insert into the disc table in the database
 
 	
