@@ -783,9 +783,9 @@ if (typeof NProgress != 'undefined') {
 		
 		if ($('#gauge-text-00').length){ 
 		
-			chart_gauge_00.maxValue = 6000;
+			chart_gauge_00.maxValue = 100;
 			chart_gauge_00.animationSpeed = 32;
-			chart_gauge_00.set(5000);
+			chart_gauge_00.set(75);
 			chart_gauge_00.setTextField(document.getElementById("gauge-text-00"));
 		}
 	
@@ -797,9 +797,9 @@ if (typeof NProgress != 'undefined') {
 		
 		if ($('#gauge-text-01').length){ 
 		
-			chart_gauge_01.maxValue = 6000;
+			chart_gauge_01.maxValue = 100;
 			chart_gauge_01.animationSpeed = 32;
-			chart_gauge_01.set(2000);
+			chart_gauge_01.set(33);
 			chart_gauge_01.setTextField(document.getElementById("gauge-text-01"));
 		}
 	
@@ -811,9 +811,9 @@ if (typeof NProgress != 'undefined') {
 		
 		if ($('#gauge-text-02').length){ 
 		
-			chart_gauge_02.maxValue = 6000;
+			chart_gauge_02.maxValue = 100;
 			chart_gauge_02.animationSpeed = 32;
-			chart_gauge_02.set(3000);
+			chart_gauge_02.set(57);
 			chart_gauge_02.setTextField(document.getElementById("gauge-text-02"));
 		}
 	
@@ -825,9 +825,9 @@ if (typeof NProgress != 'undefined') {
 		
 		if ($('#gauge-text-03').length){ 
 		
-			chart_gauge_03.maxValue = 6000;
+			chart_gauge_03.maxValue = 100;
 			chart_gauge_03.animationSpeed = 32;
-			chart_gauge_03.set(1000);
+			chart_gauge_03.set(42);
 			chart_gauge_03.setTextField(document.getElementById("gauge-text-03"));
 		}
 	
