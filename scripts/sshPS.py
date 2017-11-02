@@ -4,7 +4,6 @@ import sys
 import base64
 import MySQLdb
 
-paramiko.util.log_to_file("./paramiko.log")
 
 # Add any machines we want to pull data from
 hosts = ["student00.cse.nd.edu",
