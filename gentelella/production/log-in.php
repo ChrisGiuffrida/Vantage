@@ -1,6 +1,6 @@
 <?php
 require('connect.php');
-if ($stmt = mysqli_prepare($link, "SELECT password, netid, first, last, email, phone FROM Users where email=?")) {
+if ($stmt = mysqli_prepare($link, "SELECT password, netid, first_name, last_name, email, phone FROM Users where email=?")) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $stmt->bind_param("s", $email);
