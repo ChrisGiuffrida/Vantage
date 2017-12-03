@@ -7,10 +7,13 @@ import MySQLdb
 
 # Add any machines we want to pull data from
 hosts = ["student00.cse.nd.edu",
-	"student01.cse.nd.edu",
 	"student02.cse.nd.edu",
 	"student04.cse.nd.edu" ]
 port=22
+'''hosts = ["student00.cse.nd.edu",
+	"student01.cse.nd.edu",
+	"student02.cse.nd.edu",
+	"student04.cse.nd.edu" ]'''
 username='bfite'
 
 #Please do not decode this

@@ -1,6 +1,19 @@
 <?php
 require("verify_session.php");
 require("summary.php");
+
+function print_ticker($change) {
+  if ($change > 0) {
+    echo '<i class="green"><i class="fa fa-sort-asc"></i>';
+  }
+  elseif ($change < 0) {
+    echo '<i class="red"><i class="fa fa-sort-desc"></i>';
+  }
+  else {
+    echo '<i class="blue"><i class="fa fa-sort"></i>';
+  }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -148,32 +161,44 @@ require("summary.php");
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
               <div class="count"><?php echo $total_users; ?></div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>4% </i> From yesterday</span>
+              <span class="count_bottom">                
+                <?php print_ticker($total_users_change); echo $total_users_change; ?>% </i> from yesterday
+              </span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-file-code-o"></i> Total Processes</span> 
               <div class="count"><?php echo $total_processes; ?></div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From yesterday</span>
+              <span class="count_bottom">
+                <?php print_ticker($total_processes_change); echo $total_processes_change; ?>% </i> from yesterday
+              </span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-sign-in"></i> Total Logins</span>
               <div class="count green"><?php echo $total_logins; ?></div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
+              <span class="count_bottom">
+                <?php print_ticker($total_logins_change); echo $total_logins_change; ?>% </i> from yesterday
+              </span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-laptop"></i> Total Devices</span>
               <div class="count"><?php echo $total_devices; ?></div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From yesterday</span>
+              <span class="count_bottom">
+                <?php print_ticker($total_devices_change); echo $total_devices_change; ?>% </i> from yesterday
+              </span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-file-code-o"></i> Your Processes</span>
               <div class="count"><?php echo $your_processes; ?></div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
+              <span class="count_bottom">
+                <?php print_ticker($your_processes_change); echo $your_processes_change; ?>% </i> from yesterday
+              </span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-sign-in"></i> Your Logins</span>
               <div class="count"><?php echo $your_logins; ?></div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From yesterday</span>
+              <span class="count_bottom">
+                <?php print_ticker($your_logins_change); echo $your_logins_change; ?>% </i> from yesterday
+              </span>
             </div>
           </div>
 
