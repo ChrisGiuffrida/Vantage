@@ -49,12 +49,12 @@ function init_charts() {
             data: [120, 50, 140],
             backgroundColor: [
               "#9B59B6",
-              "#BDC3C7",
+              "#26B99A",
               "#3498DB"
             ],
             hoverBackgroundColor: [
               "#B370CF",
-              "#CFD4D8",
+              "#36CAAB",
               "#49A9EA"
             ]
 
