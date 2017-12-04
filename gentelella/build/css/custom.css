@@ -492,7 +492,7 @@ body .container.body .right_col {
 body {
     color: #73879C;
     background: #2A3F54;
-    font-family: "Libre Franklin", "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-family: "Libre Franklin", -apple-system, "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.471
@@ -2501,7 +2501,7 @@ span.tag {
     margin-right: 5px;
     font-weight: 500;
     margin-bottom: 5px;
-    font-family: helvetica
+    font-family: "Libre Franklin", "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
 }
 span.tag a {
     color: #F1F6F7 !important
@@ -2515,7 +2515,7 @@ span.tag a {
 .tagsinput input {
     width: 80px;
     margin: 0px;
-    font-family: helvetica;
+    font-family: "Libre Franklin", "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     border: 1px solid transparent;
     padding: 3px;
@@ -3326,7 +3326,7 @@ ul.project_files li a i {
     color: #666;
     background: rgba(243, 242, 243, 0.8);
     border: solid 2px rgba(195, 194, 196, 0.8);
-    font-family: sans-serif;
+    font-family: "Libre Franklin", "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 12px;
     text-align: center
 }

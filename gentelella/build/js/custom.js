@@ -1,5 +1,8 @@
 // OUR JS
 
+Chart.defaults.global.defaultFontFamily = '"Libre Franklin", -apple-system, "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;';
+//
+
 $(document).ready(function() {
 	$("input#phone").change(function(){
 		$("input#phone").attr("value", $("input#phone").val());
