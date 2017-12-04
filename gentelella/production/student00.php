@@ -1,6 +1,7 @@
 <?php
 require("verify_session.php");
-require("summary.php");
+require("machina.php");
+$array = get_data("student00.cse.nd.edu")
 ?>
 
 <!DOCTYPE html>
@@ -150,28 +151,28 @@ require("summary.php");
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-users"></i></div>
-                <div class="count">179</div>
+                <div class="count"><?php echo $array["users"]?></div>
                 <h3>Users</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-file-code-o"></i></div>
-                <div class="count">179</div>
+                <div class="count"><?php echo $array["processes"]?></div>
                 <h3>Processes</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-sign-in"></i></div>
-                <div class="count">179</div>
+                <div class="count"><?php echo $array["logins"]?></div>
                 <h3>Logins</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-laptop"></i></div>
-                <div class="count">179</div>
+                <div class="count"><?php echo $array["devices"]?></div>
                 <h3>Devices</h3>
               </div>
             </div>
@@ -181,28 +182,28 @@ require("summary.php");
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-tasks"></i></div>
-                  <div class="count">179</div>
+                  <div class="count"><?php echo $array["cpu"]?>%</div>
                   <h3>Avg. CPU %</h3>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-clock-o"></i></div>
-                  <div class="count">179</div>
+                  <div class="count"><?php echo $array["uptime"]?></div>
                   <h3>Uptime</h3>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-server"></i></div>
-                  <div class="count">179</div>
+                  <div class="count"><?php echo $array["num_disks"]?></div>
                   <h3># of Disks</h3>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-folder-open-o"></i></div>
-                  <div class="count">179</div>
+                  <div class="count"><?php echo $array["memory"]?></div>
                   <h3>Avg. Memory</h3>
                 </div>
               </div>

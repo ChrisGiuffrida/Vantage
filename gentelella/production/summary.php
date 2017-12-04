@@ -4,7 +4,7 @@ function prcnt_change($ystrdy, $today) {
         return 0;
     }
     else {
-        return (($today - $ystrdy) / $ystrdy) * 100;
+        return round((($today - $ystrdy) / $ystrdy) * 100, 1);
     }
 }
 
