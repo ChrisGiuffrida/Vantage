@@ -1,21 +1,3 @@
-<!-- <?php
-require("verify_session.php");
-require("summary.php");
-
-function print_ticker($change) {
-  if ($change > 0) {
-    echo '<i class="green"><i class="fa fa-sort-asc"></i>';
-  }
-  elseif ($change < 0) {
-    echo '<i class="red"><i class="fa fa-sort-desc"></i>';
-  }
-  else {
-    echo '<i class="blue"><i class="fa fa-sort"></i>';
-  }
-}
-
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
