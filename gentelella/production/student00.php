@@ -1,7 +1,6 @@
 <?php
 require("verify_session.php");
 require("summary.php");
-
 ?>
 
 <!DOCTYPE html>

@@ -41,26 +41,20 @@ function init_charts() {
         var ctx = document.getElementById("doughnut_process");
         var data = {
           labels: [
-            "Dark Grey",
-            "Purple Color",
-            "Gray Color",
-            "Green Color",
-            "Blue Color"
+            "Sophomore",
+            "Junior",
+            "Senior"
           ],
           datasets: [{
-            data: [120, 50, 140, 180, 100],
+            data: [120, 50, 140],
             backgroundColor: [
-              "#455C73",
               "#9B59B6",
               "#BDC3C7",
-              "#26B99A",
               "#3498DB"
             ],
             hoverBackgroundColor: [
-              "#34495E",
               "#B370CF",
               "#CFD4D8",
-              "#36CAAB",
               "#49A9EA"
             ]
 
