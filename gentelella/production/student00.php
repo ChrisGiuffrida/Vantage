@@ -143,7 +143,8 @@ require("summary.php");
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <h1>Daily Stats:</h1>
+          <h1 class="title-right">student00</h1>
+          <h1 class="title-section">Daily Stats:</h1>
           <!-- top tiles -->
           <div class="row top_tiles">
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -208,7 +209,7 @@ require("summary.php");
             </div>
 
           <!-- OUR GRAPHS! -->
-          <h1>Processes:</h1>
+          <h1 class="title-section">Processes:</h1>
 
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -376,7 +377,7 @@ require("summary.php");
                   </div>
                 </div> <!-- ./row -->
                 <div class="clearfix"></div>
-                <h1>Logins:</h1>
+                <h1 class="title-section">Logins:</h1>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                       <div class="x_panel">
@@ -458,7 +459,7 @@ require("summary.php");
                         </div>             
 
                 </div>
-                <h1>Performance:</h1>
+                <h1 class="title-section">Performance:</h1>
 
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
