@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require("verify_session.php");
 require("summary.php");
 
@@ -14,7 +14,7 @@ function print_ticker($change) {
   }
 }
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -156,7 +156,71 @@ function print_ticker($change) {
 
         <!-- page content -->
         <div class="right_col" role="main">
+          <h1>Daily Stats:</h1>
           <!-- top tiles -->
+          <div class="row top_tiles">
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-users"></i></div>
+                <div class="count">179</div>
+                <h3>Users</h3>
+              </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-file-code-o"></i></div>
+                <div class="count">179</div>
+                <h3>Processes</h3>
+              </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-sign-in"></i></div>
+                <div class="count">179</div>
+                <h3>Logins</h3>
+              </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-laptop"></i></div>
+                <div class="count">179</div>
+                <h3>Devices</h3>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-server"></i></div>
+                  <div class="count">179</div>
+                  <h3>Avg. CPU %</h3>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-file-clock-o"></i></div>
+                  <div class="count">179</div>
+                  <h3>Uptime</h3>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-server"></i></div>
+                  <div class="count">179</div>
+                  <h3># of Disks</h3>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                  <div class="icon"><i class="fa fa-laptop"></i></div>
+                  <div class="count">179</div>
+                  <h3>Avg. Memory</h3>
+                </div>
+              </div>
+            </div>
+
+
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
