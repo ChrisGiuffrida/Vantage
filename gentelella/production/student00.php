@@ -230,7 +230,7 @@ $array = get_data("student00.cse.nd.edu")
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Logins <small>Average vs. Past Week</small></h2>
+                  <h2>Average Users <small>All Time vs. Past Week</small></h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -258,7 +258,7 @@ $array = get_data("student00.cse.nd.edu")
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Average Daily CPU<small>Over Past Week</small></h2>
+                  <h2>Average Daily CPU %<small>Over Past Week</small></h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -720,7 +720,148 @@ $array = get_data("student00.cse.nd.edu")
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.js"></script>
-    <script src="../build/js/student00.js"></script>
+    <!-- <script src="../build/js/student00.js"> -->
+    <script type="text/javascript">
+          Chart.defaults.global.defaultFontFamily = '"Libre Franklin", -apple-system, "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif';
+
+    if ($('#bar_processes').length ){ 
+        var ctx = document.getElementById("bar_processes");
+
+        var bar_processes = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+            label: 'On Average',
+            backgroundColor: "#26B99A",
+            data: <?php echo json_encode($array["avgprocgraph"]); ?>
+            }, {
+            label: 'Today',
+            backgroundColor: "#03586A",
+            data: <?php echo json_encode($array["weekprocgraph"]); ?>
+            }]
+        },
+
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                beginAtZero: true
+                }
+            }]
+            },
+            legend: {
+                display: false,
+                position: 'right',
+    labels: {
+        fontColor: 'rgb(255, 99, 132)'
+    }
+    }
+        }
+        });
+    }
+
+    if ($('#doughnut_process').length ){ 
+        var ctx = document.getElementById("doughnut_process");
+        var data = {
+          labels: [
+            "Sophomore",
+            "Junior",
+            "Senior"
+          ],
+          datasets: [{
+            data: [120, 50, 140],
+            backgroundColor: [
+              "#9B59B6",
+              "#26B99A",
+              "#3498DB"
+            ],
+            hoverBackgroundColor: [
+              "#B370CF",
+              "#36CAAB",
+              "#49A9EA"
+            ]
+
+          }]
+        };
+
+        var canvasDoughnut = new Chart(ctx, {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: data
+        });
+       
+      } 
+    
+    if ($('#bar_logins').length ){ 
+        var ctx = document.getElementById("bar_logins");
+        var bar_logins = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+            label: 'On Average',
+            backgroundColor: "#26B99A",
+            data: <?php echo json_encode($array["avglogingraph"]); ?>
+            }, {
+            label: 'Today',
+            backgroundColor: "#03586A",
+            data: <?php echo json_encode($array["weeklogingraph"]); ?>
+            }]
+        },
+
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                beginAtZero: true
+                }
+            }]
+            },
+            legend: {
+                display: false,
+                position: 'right',
+    labels: {
+        fontColor: 'rgb(255, 99, 132)'
+    }
+    }
+        }
+        });
+    }
+
+    if ($('#line_performance').length ){  
+        
+          var ctx = document.getElementById("line_performance");
+          var line_performance = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              datasets: [{
+                label: "Average CPU Over Time",
+                backgroundColor: "rgba(38, 185, 154, 0.31)",
+                borderColor: "rgba(38, 185, 154, 0.7)",
+                pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointBorderWidth: 1,
+                data: <?php echo json_encode($array["alltimecpugraph"]); ?>
+              }, {
+                label: "Average CPU Past Week",
+                backgroundColor: "rgba(3, 88, 106, 0.3)",
+                borderColor: "rgba(3, 88, 106, 0.70)",
+                pointBorderColor: "rgba(3, 88, 106, 0.70)",
+                pointBackgroundColor: "rgba(3, 88, 106, 0.70)",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(151,187,205,1)",
+                pointBorderWidth: 1,
+                data: <?php echo json_encode($array["weekcpugraph"]); ?>
+              }]
+            },
+          });
+        
+        }
+    </script>
 	
   </body>
 </html>

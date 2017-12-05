@@ -148,6 +148,85 @@
         }
         $array["cpuleader"] = $cpuleaderboard;
 
+        // GRAPHS
+        // top 10 processes leaderboards last week
+        require("connect.php");
+        $avgprocesses = array();
+        if ($stmt = mysqli_prepare($link, "SELECT dayofweek(date) as week, round(avg(cnt),2) FROM (SELECT date, count(*) as cnt from Processes where machine = ? group by date) pday group by week;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $averageproc = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($averageproc, MYSQL_NUM)) {
+                $avgprocesses[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["avgprocgraph"] = $avgprocesses;
+
+        require("connect.php");
+        $weekprocesses = array();
+        if ($stmt = mysqli_prepare($link, "SELECT dayofweek(date) as week, round(avg(cnt),2) FROM (SELECT date, count(*) as cnt from Processes where machine = ? and date > subdate(curdate(),7) group by date) pday group by week;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $weekproc = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($weekproc, MYSQL_NUM)) {
+                $weekprocesses[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["weekprocgraph"] = $weekprocesses;
+
+        require("connect.php");
+        $avglogins = array();
+        if ($stmt = mysqli_prepare($link, "SELECT dayofweek(timestamp) as weekday, round(avg(total_users),2) FROM MachineSnapshots where name = ? group by weekday;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $avglog = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($avglog, MYSQL_NUM)) {
+                $avglogins[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["avglogingraph"] = $avglogins;
+
+        require("connect.php");
+        $weeklogins = array();
+        if ($stmt = mysqli_prepare($link, "SELECT dayofweek(timestamp) as weekday, round(avg(total_users),2) FROM MachineSnapshots where name = ? and date(timestamp) > subdate(curdate(), 7) group by weekday;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $weeklog = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($weeklog, MYSQL_NUM)) {
+                $weeklogins[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["weeklogingraph"] = $weeklogins;
+
+        require("connect.php");
+        $alltimecpu = array();
+        if ($stmt = mysqli_prepare($link, "select dayofweek(timestamp)weekday, avg(cpu_percentage) FROM MachineSnapshots WHERE name = ? group by weekday")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $cpu = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($cpu, MYSQL_NUM)) {
+                $alltimecpu[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["alltimecpugraph"] = $alltimecpu;
+
+        require("connect.php");
+        $weekcpu = array();
+        if ($stmt = mysqli_prepare($link, "select dayofweek(timestamp)weekday, avg(cpu_percentage) FROM MachineSnapshots WHERE name = ? and date(timestamp) > subdate(curdate(), 7) group by weekday")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $wcpu = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($wcpu, MYSQL_NUM)) {
+                $weekcpu[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["weekcpugraph"] = $weekcpu;
         return $array;
     }
 ?>
