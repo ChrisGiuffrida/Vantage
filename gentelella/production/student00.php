@@ -72,22 +72,12 @@ $array = get_data("student00.cse.nd.edu")
                       <li><a href="#">Search</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-flash"></i>Live Data<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#">Users</a></li>
                       <li><a href="#">Machines</a></li>
                       <li><a href="#">Search</a></li>
                     </ul>
-                  </li>
-                  <li><a><i class="fa fa-hourglass"></i>Historical Data<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Users</a></li>
-                      <li><a href="#">Machines</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exchange"></i>Compare<span class="fa fa-minus"></span></a>
-                  </li>
                 </ul>
               </div>
               <div class="menu_section">
@@ -210,13 +200,11 @@ $array = get_data("student00.cse.nd.edu")
             </div>
 
           <!-- OUR GRAPHS! -->
-          <h1 class="title-section">Processes:</h1>
-
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Bar graph <small>Sessions</small></h2>
+                  <h2>Processes <small>Average vs. Past Week</small></h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -239,11 +227,10 @@ $array = get_data("student00.cse.nd.edu")
                 </div>
               </div>
             </div>
-
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Most Popular Processes <small>Run in Last Week</small></h2>
+                  <h2>Logins <small>Average vs. Past Week</small></h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -260,100 +247,45 @@ $array = get_data("student00.cse.nd.edu")
                     </li>
                   </ul>
                   <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Process Name</th>
-                          <th>Number of Times Run</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td><code>ferris wheel</code></td>
-                          <td>58</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td><code>yeah okay</code></td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td><code>sure thang</code></td>
-                          <td>28</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td><code>jobs cron</code></td>
-                          <td>0</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
-              </div> 
+                <div class="x_content">
+                  <canvas id="bar_logins"></canvas>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Leaderboard <small>Run in Last Week</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Average Daily CPU<small>Over Past Week</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
                         </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Settings 1</a>
-                            </li>
-                            <li><a href="#">Settings 2</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        <li><a href="#">Settings 2</a>
                         </li>
                       </ul>
-                      <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>NetID</th>
-                              <th>Number of Processes Run</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>tkrill</td>
-                              <td>101</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>pbui</td>
-                              <td>9</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>showley</td>
-                              <td>5</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>             
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <canvas id="line_performance"></canvas>
+                </div>
+              </div>
+            </div>          
                 
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="x_panel">
                       <div class="x_title">
-                        <h2>Donut Graph <small>Sessions</small></h2>
+                        <h2>Total Processes Run by Grade<small>For Today</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
@@ -378,39 +310,98 @@ $array = get_data("student00.cse.nd.edu")
                   </div>
                 </div> <!-- ./row -->
                 <div class="clearfix"></div>
-                <h1 class="title-section">Logins:</h1>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="x_panel">
-                        <div class="x_title">
-                          <h2>Bar graph <small>Sessions</small></h2>
-                          <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                              <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
-                          </ul>
-                          <div class="clearfix"></div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2>Process Leaderboard <small>Run in Last Week on student00</small></h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                          </li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="#">Settings 1</a>
+                              </li>
+                              <li><a href="#">Settings 2</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a class="close-link"><i class="fa fa-close"></i></a>
+                          </li>
+                        </ul>
+                        <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                          <canvas id="bar_logins"></canvas>
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>NetID</th>
+                                <th>Number of Processes Run</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>tkrill</td>
+                                <td>101</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>pbui</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10</th>
+                                <td>showley</td>
+                                <td>5</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                    </div>
+                    </div> 
 
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Leaderboard <small>Run in Last Week</small></h2>
+                            <h2>Login Leaderboard <small>Run in Last Week on student00</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -434,7 +425,186 @@ $array = get_data("student00.cse.nd.edu")
                                   <tr>
                                     <th>#</th>
                                     <th>NetID</th>
-                                    <th>Number of Processes Run</th>
+                                    <th>Number of Logins</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>tkrill</td>
+                                    <td>101</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>pbui</td>
+                                    <td>9</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">10</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>             
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2>Most Popular Processes <small>Run in Last Week on student00</small></h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                          </li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="#">Settings 1</a>
+                              </li>
+                              <li><a href="#">Settings 2</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a class="close-link"><i class="fa fa-close"></i></a>
+                          </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Process Name</th>
+                                <th>Number of Times Run</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td><code>ferris wheel</code></td>
+                                <td>58</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td><code>yeah okay</code></td>
+                                <td>42</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td><code>sure thang</code></td>
+                                <td>28</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10</th>
+                                <td><code>jobs cron</code></td>
+                                <td>0</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div> 
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Leaderboard <small>Run in Last Week on student00</small></h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                              </li>
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Settings 1</a>
+                                  </li>
+                                  <li><a href="#">Settings 2</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><a class="close-link"><i class="fa fa-close"></i></a>
+                              </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Peak CPU %</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -453,86 +623,38 @@ $array = get_data("student00.cse.nd.edu")
                                     <td>showley</td>
                                     <td>5</td>
                                   </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>             
-
-                </div>
-                <h1 class="title-section">Performance:</h1>
-
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <div class="x_panel">
-                        <div class="x_title">
-                          <h2>Line graph<small>Sessions</small></h2>
-                          <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                              <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                              </ul>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
-                          </ul>
-                          <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                          <canvas id="line_performance"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="x_panel">
-                          <div class="x_title">
-                            <h2>Leaderboard <small>Run in Last Week</small></h2>
-                            <ul class="nav navbar-right panel_toolbox">
-                              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li><a href="#">Settings 1</a>
-                                  </li>
-                                  <li><a href="#">Settings 2</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li><a class="close-link"><i class="fa fa-close"></i></a>
-                              </li>
-                            </ul>
-                            <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                              <table class="table table-striped">
-                                <thead>
                                   <tr>
-                                    <th>#</th>
-                                    <th>NetID</th>
-                                    <th>Number of Processes Run</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>tkrill</td>
-                                    <td>101</td>
+                                    <th scope="row">4</th>
+                                    <td>showley</td>
+                                    <td>5</td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">2</th>
-                                    <td>pbui</td>
-                                    <td>9</td>
+                                    <th scope="row">5</th>
+                                    <td>showley</td>
+                                    <td>5</td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">3</th>
+                                    <th scope="row">6</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td>showley</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">10</th>
                                     <td>showley</td>
                                     <td>5</td>
                                   </tr>
