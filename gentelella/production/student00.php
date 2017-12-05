@@ -344,53 +344,53 @@ $array = get_data("student00.cse.nd.edu")
                             <tbody>
                               <tr>
                                 <th scope="row">1</th>
-                                <td>tkrill</td>
-                                <td>101</td>
+                                <td><?php echo $array["pleader"][0][0]?></td>
+                                <td><?php echo $array["pleader"][0][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
-                                <td>pbui</td>
-                                <td>9</td>
+                                <td><?php echo $array["pleader"][1][0]?></td>
+                                <td><?php echo $array["pleader"][1][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][2][0]?></td>
+                                <td><?php echo $array["pleader"][2][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">4</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][3][0]?></td>
+                                <td><?php echo $array["pleader"][3][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">5</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][4][0]?></td>
+                                <td><?php echo $array["pleader"][4][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">6</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][5][0]?></td>
+                                <td><?php echo $array["pleader"][5][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">7</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][6][0]?></td>
+                                <td><?php echo $array["pleader"][6][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">8</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][7][0]?></td>
+                                <td><?php echo $array["pleader"][7][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">9</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][8][0]?></td>
+                                <td><?php echo $array["pleader"][8][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">10</th>
-                                <td>showley</td>
-                                <td>5</td>
+                                <td><?php echo $array["pleader"][9][0]?></td>
+                                <td><?php echo $array["pleader"][9][1]?></td>
                               </tr>
                             </tbody>
                           </table>
@@ -431,56 +431,56 @@ $array = get_data("student00.cse.nd.edu")
                                 <tbody>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>tkrill</td>
-                                    <td>101</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>pbui</td>
-                                    <td>9</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">4</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">5</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">6</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">7</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">8</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">9</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">10</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td><?php echo $array["logleader"][0][0]?></td>
+                                <td><?php echo $array["logleader"][0][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td><?php echo $array["logleader"][1][0]?></td>
+                                <td><?php echo $array["logleader"][1][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td><?php echo $array["logleader"][2][0]?></td>
+                                <td><?php echo $array["logleader"][2][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td><?php echo $array["logleader"][3][0]?></td>
+                                <td><?php echo $array["logleader"][3][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td><?php echo $array["logleader"][4][0]?></td>
+                                <td><?php echo $array["logleader"][4][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td><?php echo $array["logleader"][5][0]?></td>
+                                <td><?php echo $array["logleader"][5][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td><?php echo $array["logleader"][6][0]?></td>
+                                <td><?php echo $array["logleader"][6][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td><?php echo $array["logleader"][7][0]?></td>
+                                <td><?php echo $array["logleader"][7][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td><?php echo $array["logleader"][8][0]?></td>
+                                <td><?php echo $array["logleader"][8][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10</th>
+                                <td><?php echo $array["logleader"][9][0]?></td>
+                                <td><?php echo $array["logleader"][9][1]?></td>
+                              </tr>
                                 </tbody>
                               </table>
                             </div>
@@ -523,53 +523,53 @@ $array = get_data("student00.cse.nd.edu")
                             <tbody>
                               <tr>
                                 <th scope="row">1</th>
-                                <td><code>ferris wheel</code></td>
-                                <td>58</td>
+                                <td><?php echo $array["procleader"][0][0]?></td>
+                                <td><?php echo $array["procleader"][0][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
-                                <td><code>yeah okay</code></td>
-                                <td>42</td>
+                                <td><?php echo $array["procleader"][1][0]?></td>
+                                <td><?php echo $array["procleader"][1][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
-                                <td><code>sure thang</code></td>
-                                <td>28</td>
+                                <td><?php echo $array["procleader"][2][0]?></td>
+                                <td><?php echo $array["procleader"][2][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">4</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][3][0]?></td>
+                                <td><?php echo $array["procleader"][3][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">5</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][4][0]?></td>
+                                <td><?php echo $array["procleader"][4][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">6</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][5][0]?></td>
+                                <td><?php echo $array["procleader"][5][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">7</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][6][0]?></td>
+                                <td><?php echo $array["procleader"][6][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">8</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][7][0]?></td>
+                                <td><?php echo $array["procleader"][7][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">9</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][8][0]?></td>
+                                <td><?php echo $array["procleader"][8][1]?></td>
                               </tr>
                               <tr>
                                 <th scope="row">10</th>
-                                <td><code>jobs cron</code></td>
-                                <td>0</td>
+                                <td><?php echo $array["procleader"][9][0]?></td>
+                                <td><?php echo $array["procleader"][9][1]?></td>
                               </tr>
                             </tbody>
                           </table>
@@ -608,56 +608,56 @@ $array = get_data("student00.cse.nd.edu")
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>tkrill</td>
-                                    <td>101</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>pbui</td>
-                                    <td>9</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">4</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">5</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">6</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">7</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">8</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">9</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">10</th>
-                                    <td>showley</td>
-                                    <td>5</td>
-                                  </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td><?php echo $array["cpuleader"][0][0]?></td>
+                                <td><?php echo $array["cpuleader"][0][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td><?php echo $array["cpuleader"][1][0]?></td>
+                                <td><?php echo $array["cpuleader"][1][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td><?php echo $array["cpuleader"][2][0]?></td>
+                                <td><?php echo $array["cpuleader"][2][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td><?php echo $array["cpuleader"][3][0]?></td>
+                                <td><?php echo $array["cpuleader"][3][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td><?php echo $array["cpuleader"][4][0]?></td>
+                                <td><?php echo $array["cpuleader"][4][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">6</th>
+                                <td><?php echo $array["cpuleader"][5][0]?></td>
+                                <td><?php echo $array["cpuleader"][5][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">7</th>
+                                <td><?php echo $array["cpuleader"][6][0]?></td>
+                                <td><?php echo $array["cpuleader"][6][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">8</th>
+                                <td><?php echo $array["cpuleader"][7][0]?></td>
+                                <td><?php echo $array["cpuleader"][7][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">9</th>
+                                <td><?php echo $array["cpuleader"][8][0]?></td>
+                                <td><?php echo $array["cpuleader"][8][1]?></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10</th>
+                                <td><?php echo $array["cpuleader"][9][0]?></td>
+                                <td><?php echo $array["cpuleader"][9][1]?></td>
+                              </tr>
                                 </tbody>
                               </table>
                             </div>

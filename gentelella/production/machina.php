@@ -88,6 +88,66 @@
             mysqli_stmt_fetch($stmt);
         }
         $array["memory"] = human_filesize(round($memory * 1000), 1);
+
+
+        // LEADERBOARDS
+        // top 10 processes leaderboards last week
+        require("connect.php");
+        $pleaderboard = array();
+        if ($stmt = mysqli_prepare($link, "SELECT netid, count(*) as cnt FROM Processes where machine = ? and date > subdate(curdate(), 7) group by netid order by cnt desc limit 10;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $processleader = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($processleader, MYSQL_NUM)) {
+                $pleaderboard[] = $tuple;
+            }
+            $stmt->close();
+        }
+        $array["pleader"] = $pleaderboard;
+
+        // top 10 login leaderboards last week
+        require("connect.php");
+        $logleaderboard = array();
+        if ($stmt = mysqli_prepare($link, "SELECT netid, count(*) as logins FROM Sessions where machine = ? and date(timestamp) > subdate(curdate(), 7) group by netid order by logins desc limit 10;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $loginleader = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($loginleader, MYSQL_NUM)) {
+                $logleaderboard[] = $tuple;
+            }
+            $stmt->close();
+        }
+        $array["logleader"] = $logleaderboard;
+
+
+        // top 10 commands leaderboards last week
+        require("connect.php");
+        $processleaderboard = array();
+        if ($stmt = mysqli_prepare($link, "SELECT command, count(*) as cnt FROM Processes where machine = ? and date > subdate(curdate(), 7) group by netid order by cnt desc limit 10;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $procleader = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($procleader, MYSQL_NUM)) {
+                $processleaderboard[] = $tuple;
+            }
+            $stmt->close();
+        }
+        $array["procleader"] = $processleaderboard;
+
+        // top 10 cpu leaderboards last week
+        require("connect.php");
+        $cpuleaderboard = array();
+        if ($stmt = mysqli_prepare($link, "SELECT date(timestamp), round(max(cpu_percentage), 2) as cpu FROM MachineSnapshots where name = ? and date(timestamp) > subdate(curdate(), 30) group by day(timestamp) order by cpu desc limit 10;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $cpuleader = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($cpuleader, MYSQL_NUM)) {
+                $cpuleaderboard[] = $tuple;
+            }
+            $stmt->close();
+        }
+        $array["cpuleader"] = $cpuleaderboard;
+
         return $array;
     }
 ?>
