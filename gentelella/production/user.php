@@ -424,6 +424,8 @@ $data = get_data("pbui");
     <!-- morris.js -->
     <script src="../vendors/raphael/raphael.min.js"></script>
     <script src="../vendors/morris.js/morris.min.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- bootstrap-daterangepicker -->
