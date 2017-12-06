@@ -170,7 +170,7 @@ require("verify_session.php");
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p>Upload a CSV file with netids for users you would like to generate a report for.  Drag and drop or click to upload.</p>
+                    <p>Upload a CSV file with netids to generate a report.  Drag and drop a file or click in the box to upload.</p>
                     <form action="form_upload.html" class="dropzone"></form>
                     <br />
                     <br />
