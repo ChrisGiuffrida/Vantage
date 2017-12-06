@@ -1,3 +1,6 @@
+<?php
+require("verify_session.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +31,11 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
     <link href="../build/css/summary.css" rel="stylesheet">
+    <style>
+      label.label-lg {
+        font-size: 1.5em;
+      }
+    </style>
 
     <!-- Google Fonts -->
 	  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
@@ -101,7 +109,7 @@
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="images/user.png" alt="">
-                    Thomas Krill                    <span class=" fa fa-angle-down"></span>
+                    <?php echo $_SESSION["first"] . " " . $_SESSION["last"]; ?> <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <!-- <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li> -->
@@ -164,13 +172,13 @@
                       </div>
                       <div class="x_content">
                         <br />
-                        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="search" method="GET" action="user.php" data-parsley-validate class="form-horizontal form-label-left">
     
                           <div class="form-group">
-                            <label class="label-lg control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NetID <span class="required">*</span>
+                            <label class="label-lg control-label col-md-3 col-sm-3 col-xs-12" for="netid">NetID <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="first-name" required="required" class="input-lg form-control col-md-7 col-xs-12">
+                              <input type="text" name="netid" required="required" class="input-lg form-control col-md-7 col-xs-12">
                             </div>
                           </div>
                           <div class="form-group">
