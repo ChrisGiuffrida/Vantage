@@ -81,15 +81,10 @@ function print_ticker($change) {
                 <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="user.php">Your Data</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li><a href="search.php">Search</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="#">Users</a></li>
-                    <li><a href="#">Machines</a></li>
-                    <li><a href="#">Search</a></li>
-                  </ul>
+                <li><a><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>
               </ul>
             </div>
             <div class="menu_section">
@@ -97,10 +92,10 @@ function print_ticker($change) {
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="#">Brandon Fite</a></li>
-                    <li><a href="#">Chris Giuffrida</a></li>
-                    <li><a href="#">Thomas Krill</a></li>
-                    <li><a href="#">Anthony Luc</a></li>
+                    <li><a href="mailto:bfite@nd.edu">Brandon Fite</a></li>
+                    <li><a href="mailto:cgiuffri@nd.edu">Chris Giuffrida</a></li>
+                    <li><a href="mailto:tkrill@nd.edu">Thomas Krill</a></li>
+                    <li><a href="mailto:aluc@nd.edu">Anthony Luc</a></li>
                   </ul>
                 </li>
               </li>
