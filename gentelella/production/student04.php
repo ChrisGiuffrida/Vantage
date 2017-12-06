@@ -757,28 +757,28 @@ $array = get_data("student04.cse.nd.edu")
     }
 
     if ($('#doughnut_process').length ){ 
-        var ctx = document.getElementById("doughnut_process");
-        var data = {
-          labels: [
-            "Sophomore",
-            "Junior",
-            "Senior"
+      var ctx = document.getElementById("doughnut_process");
+      var data = {
+        labels: [
+          "Junior",
+          "Senior",
+          "Sophomore"
+        ],
+        datasets: [{
+          data: <?php echo json_encode($array["processes_donut"]); ?>,
+          backgroundColor: [
+            "#9B59B6",
+            "#26B99A",
+            "#3498DB"
           ],
-          datasets: [{
-            data: [120, 50, 140],
-            backgroundColor: [
-              "#9B59B6",
-              "#26B99A",
-              "#3498DB"
-            ],
-            hoverBackgroundColor: [
-              "#B370CF",
-              "#36CAAB",
-              "#49A9EA"
-            ]
+          hoverBackgroundColor: [
+            "#B370CF",
+            "#36CAAB",
+            "#49A9EA"
+          ]
 
-          }]
-        };
+        }]
+      };
 
         var canvasDoughnut = new Chart(ctx, {
           type: 'doughnut',
