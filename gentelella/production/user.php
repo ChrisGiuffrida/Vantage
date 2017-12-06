@@ -227,10 +227,7 @@ $data = get_data("pbui");
                         </div>
                       </div>
                       <!-- start of user-activity-graph -->
-                      <div id="user_processes" style="width:100%; height:280px;"></div>
-                      <div class="x_content">
                         <canvas id="user_processes" style="width:100%; height:280px;"></canvas>
-                      </div>
                       <!-- <div id="user_processes" style="width:100%; height:280px;"></div> -->
                       <!-- end of user-activity-graph -->
 
@@ -488,10 +485,10 @@ $data = get_data("pbui");
             legend: {
                 display: false,
                 position: 'right',
-    labels: {
-        fontColor: 'rgb(255, 99, 132)'
-    }
-    }
+        labels: {
+          fontColor: 'rgb(255, 99, 132)'
+        }
+        }
         }
         });
     }
