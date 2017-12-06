@@ -1,6 +1,5 @@
 <?php
 require("verify_session.php");
-$array = get_data("student00.cse.nd.edu")
 ?>
 
 <!DOCTYPE html>
