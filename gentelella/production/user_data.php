@@ -40,7 +40,7 @@
         // User Activity Report
         require("connect.php");
         $cpuleaderboard = array();
-        if ($stmt = mysqli_prepare($link, "SELECT dayname(date), count(*) from Processes where netid = ? group by dayname(date) order by dayofweek(date);")) {
+        if ($stmt = mysqli_prepare($link, "SELECT coalesce(cnt, 0) from (select * from (select * from Daysofweek) a left join (select dayofweek(date) as dayy, count(*) cnt from Processes where netid = ? group by dayname(date) order by dayofweek(date)) b on a.day = b.dayy) c;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
             $user_graph = $stmt->get_result();
