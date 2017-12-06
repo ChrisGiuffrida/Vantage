@@ -1,4 +1,5 @@
 <?php
+require("verify_session.php");
 require("navis.php");
 print_top();
 ?>

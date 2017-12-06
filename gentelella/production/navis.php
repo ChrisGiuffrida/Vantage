@@ -1,6 +1,4 @@
 <?php
-require("verify_session.php");
-
 function print_top() {
     echo '
 <!DOCTYPE html>
