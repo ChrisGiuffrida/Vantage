@@ -310,38 +310,38 @@ $data = get_data("pbui");
                               <tbody>
                                 <tr>
                                   <td>1</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>./pq -h fifo 8 9 0 1</td>
-                                  <td>student00</td>
+                                  <td><?php echo $data["recent_processes"][0][0]; ?></td>
+                                  <td><?php echo $data["recent_processes"][0][1]; ?></td>
+                                  <td><?php echo $data["recent_processes"][0][2]; ?></td>
+                                  <td><?php echo $data["recent_processes"][0][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>2</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_processes"][1][0]; ?></td>
+                                  <td><?php echo $data["recent_processes"][1][1]; ?></td>
+                                  <td><?php echo $data["recent_processes"][1][2]; ?></td>
+                                  <td><?php echo $data["recent_processes"][1][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>3</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_processes"][2][0]; ?></td>
+                                  <td><?php echo $data["recent_processes"][2][1]; ?></td>
+                                  <td><?php echo $data["recent_processes"][2][2]; ?></td>
+                                  <td><?php echo $data["recent_processes"][2][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>4</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_processes"][3][0]; ?></td>
+                                  <td><?php echo $data["recent_processes"][3][1]; ?></td>
+                                  <td><?php echo $data["recent_processes"][3][2]; ?></td>
+                                  <td><?php echo $data["recent_processes"][3][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>5</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_processes"][4][0]; ?></td>
+                                  <td><?php echo $data["recent_processes"][4][1]; ?></td>
+                                  <td><?php echo $data["recent_processes"][4][2]; ?></td>
+                                  <td><?php echo $data["recent_processes"][4][3]; ?></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -361,28 +361,28 @@ $data = get_data("pbui");
                               <tbody>
                                 <tr>
                                   <td>1</td>
-                                  <td>./pq -h fifo 8 9 0 1</td>
-                                  <td>137</td>
+                                  <td><?php echo $data["top_processes"][0][0]; ?></td>
+                                  <td><?php echo $data["top_processes"][0][1]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>2</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
+                                  <td><?php echo $data["top_processes"][1][0]; ?></td>
+                                  <td><?php echo $data["top_processes"][1][1]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>3</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
+                                  <td><?php echo $data["top_processes"][2][0]; ?></td>
+                                  <td><?php echo $data["top_processes"][2][1]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>4</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
+                                  <td><?php echo $data["top_processes"][3][0]; ?></td>
+                                  <td><?php echo $data["top_processes"][3][1]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>5</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
+                                  <td><?php echo $data["top_processes"][4][0]; ?></td>
+                                  <td><?php echo $data["top_processes"][4][1]; ?></td>
                                 </tr>
                               </tbody>
                             </table>
