@@ -1,6 +1,11 @@
 <?php
 require("verify_session.php");
 require("summary.php");
+require("machina.php");
+$student00 = get_data("student00.cse.nd.edu");
+$student01 = get_data("student01.cse.nd.edu");
+$student02 = get_data("student02.cse.nd.edu");
+$student04 = get_data("student04.cse.nd.edu");
 
 function print_ticker($change) {
   if ($change > 0) {
@@ -230,13 +235,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li><i class="fa fa-times text-danger"></i> 2 years access <strong> to all storage locations</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> storage</li>
-                                    <li><i class="fa fa-check text-success"></i> Limited <strong> download quota</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> <strong>Cash on Delivery</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> All time <strong> updates</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> access to all files</li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Allowed</strong> to be exclusing per sale</li>
+                                    <li><i class="fa fa-users"></i> <?php echo $student00["users"]?> users</li>
+                                    <li><i class="fa fa-file-code-o"></i> <?php echo $student00["processes"]?> processes</li>
+                                    <li><i class="fa fa-sign-in"></i> <?php echo $student00["logins"]?> logins</li>
+                                    <li><i class="fa fa-laptop"></i><?php echo $student00["devices"]?> devices</li>
+                                    <li><i class="fa fa-tasks"></i> <?php echo $student00["cpu"]?> Avg. CPU%</li>
+                                    <li><i class="fa fa-clock-o"></i> <?php echo $student00["uptime"]?> days of uptime</li>
+                                    <li><i class="fa fa-server"></i> <?php echo $student00["num_disks"]?> disks</li>
+                                    <li><i class="fa fa-server"></i> <?php echo $student00["memory"]?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
