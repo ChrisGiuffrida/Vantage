@@ -7,6 +7,19 @@
     }
 
     function get_data($netid) {
+        // Demographics
+        require("connect.php");
+        if ($stmt = mysqli_prepare($link, "SELECT first_name, last_name, department, status, netid from Domers where netid = ?;")) {
+            $stmt->bind_param('s', $netid);
+            mysqli_stmt_execute($stmt);
+            $demographic = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($demographic, MYSQL_NUM)) {
+                $demographics[] = $tuple;
+            }
+            $stmt->close();
+        }
+        $array["demographics"] = $demographics;
+
         // Favorite Machine
         require("connect.php");
         if ($stmt = mysqli_prepare($link, "SELECT machine from Sessions where netid = ? group by machine order by count(machine) desc limit 1;")) {
@@ -39,7 +52,6 @@
 
         // User Activity Report
         require("connect.php");
-        $cpuleaderboard = array();
         if ($stmt = mysqli_prepare($link, "SELECT coalesce(cnt, 0) from (select * from (select * from Daysofweek) a left join (select dayofweek(date) as dayy, count(*) cnt from Processes where netid = ? group by dayname(date) order by dayofweek(date)) b on a.day = b.dayy) c;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
@@ -54,7 +66,6 @@
 
         // Recent Logins
         require("connect.php");
-        $cpuleaderboard = array();
         if ($stmt = mysqli_prepare($link, "SELECT date_format(timestamp, '%c/%d/%Y'), date_format(timestamp, '%r'), machine, host from Sessions where netid = ? order by timestamp desc limit 5;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
@@ -69,7 +80,6 @@
         
         // Recent Processes
         require("connect.php");
-        $cpuleaderboard = array();
         if ($stmt = mysqli_prepare($link, "SELECT date_format(date, '%c/%d/%Y'), date_format(time, '%r'), command, machine from Processes where netid = ? order by date desc, time desc limit 5; ")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
@@ -83,7 +93,6 @@
 
         // Top Processes
         require("connect.php");
-        $cpuleaderboard = array();
         if ($stmt = mysqli_prepare($link, "SELECT command, count(command) from Processes where netid = ? group by command order by count(command) desc limit 5;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
