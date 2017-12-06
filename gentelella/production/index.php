@@ -236,14 +236,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student00["users"]?> users</li>
-                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student00["processes"]?> processes</li>
-                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student00["logins"]?> logins</li>
-                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student00["devices"]?> devices</li>
-                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student00["cpu"]?> Avg. CPU%</li>
-                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student00["uptime"]?> days of uptime</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["num_disks"]?> disks</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["memory"]?> Avg. Memory</li>
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student00["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student00["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student00["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student00["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student00["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student00["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["memory"];;?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
@@ -268,14 +268,14 @@ function print_ticker($change) {
                             <div class="">
                               <div class="pricing_features">
                               <ul class="list-unstyled text-left">
-                                <li  class="summary"><i class="fa fa-users"></i> <?php echo student01["users"]?> users</li>
-                                <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo student01["processes"]?> processes</li>
-                                <li class="summary"><i class="fa fa-sign-in"></i> <?php echo student01["logins"]?> logins</li>
-                                <li class="summary"><i class="fa fa-laptop"></i><?php echo student01["devices"]?> devices</li>
-                                <li class="summary"><i class="fa fa-tasks"></i> <?php echo student01["cpu"]?> Avg. CPU%</li>
-                                <li class="summary"><i class="fa fa-clock-o"></i> <?php echo student01["uptime"]?> days of uptime</li>
-                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["num_disks"]?> disks</li>
-                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["memory"]?> Avg. Memory</li>
+                                <li  class="summary"><i class="fa fa-users"></i> <?php echo student01["users"]; ?> users</li>
+                                <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo student01["processes"];?> processes</li>
+                                <li class="summary"><i class="fa fa-sign-in"></i> <?php echo student01["logins"];?> logins</li>
+                                <li class="summary"><i class="fa fa-laptop"></i><?php echo student01["devices"];?> devices</li>
+                                <li class="summary"><i class="fa fa-tasks"></i> <?php echo student01["cpu"];?> Avg. CPU%</li>
+                                <li class="summary"><i class="fa fa-clock-o"></i> <?php echo student01["uptime"];?> days of uptime</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["num_disks"];?> disks</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["memory"];?> Avg. Memory</li>
                               </ul>
                               </div>
                             </div>
@@ -300,14 +300,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student02["users"]?> users</li>
-                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student02["processes"]?> processes</li>
-                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student02["logins"]?> logins</li>
-                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student02["devices"]?> devices</li>
-                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student02["cpu"]?> Avg. CPU%</li>
-                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student02["uptime"]?> days of uptime</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["num_disks"]?> disks</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["memory"]?> Avg. Memory</li>
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student02["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student02["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student02["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student02["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student02["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student02["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["memory"];?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
@@ -332,14 +332,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student04["users"]?> users</li>
-                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student04["processes"]?> processes</li>
-                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student04["logins"]?> logins</li>
-                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student04["devices"]?> devices</li>
-                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student04["cpu"]?> Avg. CPU%</li>
-                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student04["uptime"]?> days of uptime</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["num_disks"]?> disks</li>
-                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["memory"]?> Avg. Memory</li>
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student04["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student04["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student04["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student04["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student04["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student04["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["memory"];?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
