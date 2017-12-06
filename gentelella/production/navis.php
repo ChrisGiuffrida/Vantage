@@ -140,7 +140,7 @@ function print_middle() {
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            &copy; 2017 Vantage | Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>
