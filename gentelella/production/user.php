@@ -1,7 +1,7 @@
 <?php
 require("verify_session.php");
 require("user_data.php");
-$data = get_data($_SESSION["netid"]);
+$data = get_data($_GET["netid"]);
 ?>
 
 <!DOCTYPE html>
