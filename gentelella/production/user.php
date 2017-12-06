@@ -431,8 +431,8 @@ $data = get_data("pbui");
     <script src="../build/js/custom.min.js"></script>
     <script type="text/javascript" >
        
-      if( typeof (Morris) === 'undefined'){ return; }
-        console.log('init_morris_charts');
+      // if( typeof (Morris) === 'undefined'){ return; }
+      //   console.log('init_morris_charts');
         
         if ($('#user_processes').length){ 
         
