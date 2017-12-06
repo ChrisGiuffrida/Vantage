@@ -233,7 +233,7 @@
             mysqli_stmt_execute($stmt);
             $process = $stmt->get_result();
             while($tuple = mysqli_fetch_array($process, MYSQL_NUM)) {
-                $processes_donut[] = $tuple[1];
+                $processes_donut[] = $tuple;
             }
             $stmt->close();
         }
