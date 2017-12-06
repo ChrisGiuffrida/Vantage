@@ -135,16 +135,7 @@ $data = get_data("pbui");
                 <h3>User Profile</h3>
               </div>
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for another user...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
-                </div>
-              </div>
+              
             </div>
             
             <div class="clearfix"></div>
@@ -227,8 +218,7 @@ $data = get_data("pbui");
                         </div>
                       </div>
                       <!-- start of user-activity-graph -->
-                        <canvas id="user_processes" style="width:100%; height:140px !important;"></canvas>
-                      <!-- <div id="user_processes" style="width:100%; height:280px;"></div> -->
+                      <canvas id="user_processes" style="width:100%; height:140px !important;"></canvas>
                       <!-- end of user-activity-graph -->
 
                       <div class="" role="tabpanel" data-example-id="togglable-tabs">
