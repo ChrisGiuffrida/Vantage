@@ -52,7 +52,7 @@
 
         // User Activity Report
         require("connect.php");
-        if ($stmt = mysqli_prepare($link, "SELECT coalesce(cnt, 0) from (select * from (select * from Daysofweek) a left join (select dayofweek(date) as dayy, count(*) cnt from Processes where netid = ? group by dayname(date) order by dayofweek(date)) b on a.day = b.dayy) c;")) {
+        if ($stmt = mysqli_prepare($link, "SELECT coalesce(cnt, 0) from (select * from (select * from Daysofweek) a left join (select dayy, round(avg(cnt),2) as cnt from (select dayofweek(date) as dayy, count(*) cnt from Processes where netid = ? group by date order by dayofweek(date))g group by dayy)b on a.day = b.dayy) c;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
             $user_graph = $stmt->get_result();
