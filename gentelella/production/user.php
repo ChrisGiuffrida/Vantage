@@ -421,36 +421,7 @@ $data = get_data($_SESSION["netid"]);
     
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <script type="text/javascript" >
-       
-      // if( typeof (Morris) === 'undefined'){ return; }
-      //   console.log('init_morris_charts');
-        
-        // if ($('#user_processes').length){ 
-        
-        //     Morris.Bar({
-        //       element: 'user_processes',
-        //       data: 
-        //       [
-        //         {'Day of Week': 'Sunday', Processes: },
-        //         {'Day of Week': 'Monday', Processes: 0},
-        //         {'Day of Week': 'Tuesday', Processes: 0},
-        //         {'Day of Week': 'Wednesday', Processes: 0},
-        //         {'Day of Week': 'Thursday', Processes: 0},
-        //         {'Day of Week': 'Friday', Processes: 0},
-        //         {'Day of Week': 'Saturday', Processes: 0}
-        //       ],
-        //       xkey: 'Day of Week',
-        //       ykeys: ['Processes'],
-        //       labels: ['Processes'],
-        //       barRatio: 0.4,
-        //       barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-        //       xLabelAngle: 35,
-        //       hideHover: 'auto',
-        //       resize: true
-        //     });
-        // }        
-
+    <script type="text/javascript" >      
         console.log(<?php echo json_encode($data["user_graph"]); ?>);
 
         if ($('#user_processes').length ){ 
@@ -462,7 +433,7 @@ $data = get_data($_SESSION["netid"]);
             datasets: [{
             label: 'Total Processes',
             backgroundColor: "#26B99A",
-            data: <?php echo json_encode($data["user_graph"][0]); ?>
+            data: <?php echo json_encode($data["user_graph"]); ?>
             }]
         },
 
