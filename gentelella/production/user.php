@@ -227,7 +227,7 @@ $data = get_data("pbui");
                         </div>
                       </div>
                       <!-- start of user-activity-graph -->
-                        <canvas id="user_processes" style="width:100%; height:50px;"></canvas>
+                        <canvas id="user_processes" style="width:100%; height:140px !important;"></canvas>
                       <!-- <div id="user_processes" style="width:100%; height:280px;"></div> -->
                       <!-- end of user-activity-graph -->
 
@@ -468,7 +468,7 @@ $data = get_data("pbui");
         data: {
             labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             datasets: [{
-            label: 'On Average',
+            label: 'Total Processes',
             backgroundColor: "#26B99A",
             data: <?php echo json_encode($data["user_graph"]); ?>
             }]
