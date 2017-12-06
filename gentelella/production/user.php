@@ -169,7 +169,7 @@ $data = get_data($_SESSION["netid"]);
                           <img class="img-responsive avatar-view" src="images/user.png" alt="Avatar" title="Change the avatar">
                         </div>
                       </div>
-                      <h3><?php echo $data["demographics"][0][0]?> <?php echo $data["demographics"][0][1]?></h3>
+                      <h3><?php echo $data["demographics"][0][1]?> <?php echo $data["demographics"][0][0]?></h3>
 
                       <ul class="list-unstyled user_data">
                         <li><i class="fa fa-fw fa-graduation-cap user-profile-icon"></i> <?php echo $data["demographics"][0][2]?>
