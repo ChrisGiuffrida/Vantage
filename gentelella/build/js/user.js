@@ -9,7 +9,7 @@ function init_morris_charts() {
           element: 'user_processes',
           data: 
           [
-            {'Day of Week': 'Sunday', Processes: 380},
+            {'Day of Week': 'Sunday', Processes: <?php echo $data["user_graph"][0] ?>},
             {'Day of Week': 'Monday', Processes: 655},
             {'Day of Week': 'Tuesday', Processes: 275},
             {'Day of Week': 'Wednesday', Processes: 1571},
