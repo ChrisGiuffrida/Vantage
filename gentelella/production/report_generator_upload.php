@@ -130,7 +130,7 @@ require("verify_session.php");
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Form Upload </h3>
+                <h3>Report Generator </h3>
               </div>
 
               <div class="title_right">
@@ -151,7 +151,7 @@ require("verify_session.php");
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Dropzone multiple file uploader</h2>
+                    <h2>Upload a CSV File</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -170,7 +170,7 @@ require("verify_session.php");
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                    <p>Upload a CSV file with netids for users you would like to generate a report for.  Drag and drop or click to upload.</p>
                     <form action="form_upload.html" class="dropzone"></form>
                     <br />
                     <br />
