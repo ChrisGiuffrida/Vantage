@@ -68,7 +68,7 @@ $data = get_data($_GET["netid"]);
                 </li>
                 <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="user.php<?php echo $_SESSION['netid'];?>">Your Data</a></li>
+                    <li><a href="user.php?netid=<?php echo $_SESSION['netid'];?>">Your Data</a></li>
                     <li><a href="search.php">Search</a></li>
                   </ul>
                 </li>
