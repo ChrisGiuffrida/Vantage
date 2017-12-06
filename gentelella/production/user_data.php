@@ -45,7 +45,7 @@
             mysqli_stmt_execute($stmt);
             $user_graph = $stmt->get_result();
             while($tuple = mysqli_fetch_array($user_graph, MYSQL_NUM)) {
-                $user_graph_array[] = $tuple[1];
+                $user_graph_array[] = $tuple;
             }
             $stmt->close();
         }
