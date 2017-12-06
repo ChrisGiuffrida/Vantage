@@ -174,7 +174,11 @@ function print_middle() {
 }
 
 // graph scripts go here
-
-//   </body>
-// </html>
+function print_bottom() {
+    echo 
+    '
+    </body>
+  </html>
+    ';
+}
 
