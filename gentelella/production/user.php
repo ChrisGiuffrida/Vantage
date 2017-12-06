@@ -1,7 +1,7 @@
 <?php
 require("verify_session.php");
 require("user_data.php");
-$data = get_data("pbui");
+$data = get_data($_SESSION["netid"]);
 ?>
 
 <!DOCTYPE html>
@@ -462,7 +462,7 @@ $data = get_data("pbui");
             datasets: [{
             label: 'Total Processes',
             backgroundColor: "#26B99A",
-            data: <?php echo json_encode($data["user_graph"]); ?>
+            data: <?php echo json_encode($data["user_graph"][0]); ?>
             }]
         },
 
