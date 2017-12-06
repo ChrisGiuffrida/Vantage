@@ -760,12 +760,12 @@ $array = get_data("student00.cse.nd.edu")
         var ctx = document.getElementById("doughnut_process");
         var data = {
           labels: [
-            "Sophomore",
             "Junior",
-            "Senior"
+            "Senior",
+            "Sophomore"
           ],
           datasets: [{
-            data: [120, 50, 140],
+            data: <?php echo json_encode($array["processes_donut"]); ?>,
             backgroundColor: [
               "#9B59B6",
               "#26B99A",
