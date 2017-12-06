@@ -1,7 +1,7 @@
 <?php
 require("verify_session.php");
 require("machina.php");
-$array = get_data("student00.cse.nd.edu")
+$array = get_data("student01.cse.nd.edu")
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +129,7 @@ $array = get_data("student00.cse.nd.edu")
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <h1 class="title-right">student00</h1>
+          <h1 class="title-right">student01</h1>
           <h1 class="title-section">Daily Stats:</h1>
           <!-- top tiles -->
           <div class="row top_tiles">
@@ -309,7 +309,7 @@ $array = get_data("student00.cse.nd.edu")
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="x_panel">
                       <div class="x_title">
-                        <h2>Process Leaderboard <small>Run in Last Week on student00</small></h2>
+                        <h2>Process Leaderboard <small>Run in Last Week on student01</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
@@ -396,7 +396,7 @@ $array = get_data("student00.cse.nd.edu")
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Login Leaderboard <small>Run in Last Week on student00</small></h2>
+                            <h2>Login Leaderboard <small>Run in Last Week on student01</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -488,7 +488,7 @@ $array = get_data("student00.cse.nd.edu")
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="x_panel">
                       <div class="x_title">
-                        <h2>Most Popular Processes <small>Run in Last Week on student00</small></h2>
+                        <h2>Most Popular Processes <small>Run in Last Week on student01</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
@@ -575,7 +575,7 @@ $array = get_data("student00.cse.nd.edu")
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Leaderboard <small>Run in Last Week on student00</small></h2>
+                            <h2>Leaderboard <small>Run in Last Week on student01</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>

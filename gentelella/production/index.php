@@ -1,6 +1,11 @@
 <?php
 require("verify_session.php");
 require("summary.php");
+require("machina.php");
+$student00 = get_data("student00.cse.nd.edu");
+$student01 = get_data("student01.cse.nd.edu");
+$student02 = get_data("student02.cse.nd.edu");
+$student04 = get_data("student04.cse.nd.edu");
 
 function print_ticker($change) {
   if ($change > 0) {
@@ -45,6 +50,7 @@ function print_ticker($change) {
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
+    <link href="../build/css/summary.css" rel="stylesheet">
 
     <!-- Google Fonts -->
 	  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
@@ -65,61 +71,46 @@ function print_ticker($change) {
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li><a href="index.php"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
-                  </li>
-                  <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="student00.php">student00</a></li>
-                      <li><a href="#">student01</a></li>
-                      <li><a href="#">student02</a></li>
-                      <li><a href="#">student04</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Your Data</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-flash"></i>Live Data<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Users</a></li>
-                      <li><a href="#">Machines</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-hourglass"></i>Historical Data<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Users</a></li>
-                      <li><a href="#">Machines</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exchange"></i>Compare<span class="fa fa-minus"></span></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu_section">
-                <h3>Information</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Brandon Fite</a></li>
-                      <li><a href="#">Chris Giuffrida</a></li>
-                      <li><a href="#">Thomas Krill</a></li>
-                      <li><a href="#">Anthony Luc</a></li>
-                    </ul>
-                  </li>
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a href="index.php"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
                 </li>
-                </ul>
-              </div>
-
+                <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="student00.php">student00</a></li>
+                    <li><a href="student01.php">student01</a></li>
+                    <li><a href="student02.php">student02</a></li>
+                    <li><a href="student04.php">student04</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="user.php">Your Data</a></li>
+                    <li><a href="search.php">Search</a></li>
+                  </ul>
+                </li>
+                <li><a href="report_generator_upload.php"><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>
+              </ul>
             </div>
+            <div class="menu_section">
+              <h3>Information</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="mailto:bfite@nd.edu">Brandon Fite</a></li>
+                    <li><a href="mailto:cgiuffri@nd.edu">Chris Giuffrida</a></li>
+                    <li><a href="mailto:tkrill@nd.edu">Thomas Krill</a></li>
+                    <li><a href="mailto:aluc@nd.edu">Anthony Luc</a></li>
+                  </ul>
+                </li>
+              </li>
+              </ul>
+            </div>
+
           </div>
         </div>
+      </div>
 
         <!-- top navigation -->
         <div class="top_nav">
@@ -202,12 +193,15 @@ function print_ticker($change) {
             </div>
           </div>
 
-          <!-- OUR GRAPHS! -->
-          <div class="row">
-              <div class="col-sm-3 col-xs-6">
-                <div class="x_panel tile">
+        <!-- page content -->
+        <div class="right" role="main">
+          <div class="">
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel" style="height:700px;">
                   <div class="x_title">
-                    <h2>Student 00</h2>
+                    <h1>Summary</h1>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -225,111 +219,152 @@ function print_ticker($change) {
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content text-center">
-                    <canvas id="chart_gauge_00" width="200" height="100" style="width: 210px; height: 110px"></canvas>
-                    <div class="goal-wrapper">
-                      <span id="gauge-text-00" class="gauge-value pull-left">0</span>
-                      <span class="gauge-value pull-left">%</span>
-                      <span id="goal-text" class="goal-value pull-right">100%</span>
+
+                  <div class="x_content">
+                    <div class="row">
+
+                      <div class="col-md-12">
+
+                        <!-- price element -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="pricing">
+                            <div class="title">
+                              <h2></h2>
+                              <h1>student00</h1>
+                            </div>
+                            <div class="x_content">
+                              <div class="">
+                                <div class="pricing_features">
+                                  <ul class="list-unstyled text-left">
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student00["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student00["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student00["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student00["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student00["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student00["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student00["memory"];;?> Avg. Memory</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="pricing_footer">
+                                <a href="student00.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
+                                <p>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- price element -->
+
+                        <!-- price element -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="pricing">
+                          <div class="title">
+                            <h2></h2>
+                            <h1>student01</h1>
+                          </div>
+                          <div class="x_content">
+                            <div class="">
+                              <div class="pricing_features">
+                              <ul class="list-unstyled text-left">
+                                <li  class="summary"><i class="fa fa-users"></i> <?php echo $student01["users"]; ?> users</li>
+                                <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student01["processes"];?> processes</li>
+                                <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student01["logins"];?> logins</li>
+                                <li class="summary"><i class="fa fa-laptop"></i><?php echo $student01["devices"];?> devices</li>
+                                <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student01["cpu"];?> Avg. CPU%</li>
+                                <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student01["uptime"];?> days of uptime</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo $student01["num_disks"];?> disks</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo $student01["memory"];?> Avg. Memory</li>
+                              </ul>
+                              </div>
+                            </div>
+                            <div class="pricing_footer">
+                              <a href="student01.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
+                              <p>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- price element -->
+
+                      <!-- price element -->
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="pricing">
+                            <div class="title">
+                              <h2></h2>
+                              <h1>student02</h1>
+                            </div>
+                            <div class="x_content">
+                              <div class="">
+                                <div class="pricing_features">
+                                  <ul class="list-unstyled text-left">
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student02["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student02["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student02["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student02["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student02["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student02["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["memory"];?> Avg. Memory</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="pricing_footer">
+                                <a href="student02.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
+                                <p>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- price element -->
+
+                        <!-- price element -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="pricing">
+                            <div class="title">
+                              <h2></h2>
+                              <h1>student04</h1>
+                            </div>
+                            <div class="x_content">
+                              <div class="">
+                                <div class="pricing_features">
+                                  <ul class="list-unstyled text-left">
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student04["users"];?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student04["processes"];?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student04["logins"];?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student04["devices"];?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student04["cpu"];?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student04["uptime"];?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["num_disks"];?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["memory"];?> Avg. Memory</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="pricing_footer">
+                                <a href="student04.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
+                                <p>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- price element -->
+
+                        
+
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="x_panel tile">
-                  <div class="x_title">
-                    <h2>Student 01</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content text-center">
-                    <canvas id="chart_gauge_01" width="200" height="100" style="width: 210px; height: 110px"></canvas>
-                    <div class="goal-wrapper">
-                      <span id="gauge-text-01" class="gauge-value pull-left">0</span>
-                      <span class="gauge-value pull-left">%</span>
-                      <span id="goal-text" class="goal-value pull-right">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="x_panel tile">
-                  <div class="x_title">
-                    <h2>Student 02</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content text-center">
-                    <canvas id="chart_gauge_02" width="200" height="100" style="width: 210px; height: 110px"></canvas>
-                    <div class="goal-wrapper">
-                      <span id="gauge-text-02" class="gauge-value pull-left">0</span>
-                      <span class="gauge-value pull-left">%</span>
-                      <span id="goal-text" class="goal-value pull-right">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="x_panel tile">
-                  <div class="x_title">
-                    <h2>Student 03</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content text-center">
-                    <canvas id="chart_gauge_03" width="200" height="100" style="width: 210px; height: 110px"></canvas>
-                    <div class="goal-wrapper">
-                      <span id="gauge-text-03" class="gauge-value pull-left">0</span>
-                      <span class="gauge-value pull-left">%</span>
-                      <span id="goal-text" class="goal-value pull-right">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
+        <!-- /page content -->
         <!-- /page content -->
 
         <!-- footer content -->
