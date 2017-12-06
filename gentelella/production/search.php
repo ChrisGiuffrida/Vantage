@@ -1,7 +1,7 @@
 <?php
 require("verify_session.php");
-require("summary.php");
-
+require("machina.php");
+$array = get_data("student01.cse.nd.edu")
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,6 @@ require("summary.php");
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
-    <link href="../build/css/search.css" rel="stylesheet">
 
     <!-- Google Fonts -->
 	  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
@@ -54,61 +53,46 @@ require("summary.php");
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li><a href="index.php"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
-                  </li>
-                  <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="student00.php">student00</a></li>
-                      <li><a href="#">student01</a></li>
-                      <li><a href="#">student02</a></li>
-                      <li><a href="#">student04</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Your Data</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-flash"></i>Live Data<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Users</a></li>
-                      <li><a href="#">Machines</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-hourglass"></i>Historical Data<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Users</a></li>
-                      <li><a href="#">Machines</a></li>
-                      <li><a href="#">Search</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exchange"></i>Compare<span class="fa fa-minus"></span></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu_section">
-                <h3>Information</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="#">Brandon Fite</a></li>
-                      <li><a href="#">Chris Giuffrida</a></li>
-                      <li><a href="#">Thomas Krill</a></li>
-                      <li><a href="#">Anthony Luc</a></li>
-                    </ul>
-                  </li>
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a href="index.php"><i class="fa fa-home"></i>Summary<span class="fa fa-minus"></span></a>
                 </li>
-                </ul>
-              </div>
-
+                <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="student00.php">student00</a></li>
+                    <li><a href="student01.php">student01</a></li>
+                    <li><a href="student02.php">student02</a></li>
+                    <li><a href="student04.php">student04</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="user.php">Your Data</a></li>
+                    <li><a href="search.php">Search</a></li>
+                  </ul>
+                </li>
+                <li><a href="report_generator_upload.php"><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>
+              </ul>
             </div>
+            <div class="menu_section">
+              <h3>Information</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-paper-plane"></i>Contact Us<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="mailto:bfite@nd.edu">Brandon Fite</a></li>
+                    <li><a href="mailto:cgiuffri@nd.edu">Chris Giuffrida</a></li>
+                    <li><a href="mailto:tkrill@nd.edu">Thomas Krill</a></li>
+                    <li><a href="mailto:aluc@nd.edu">Anthony Luc</a></li>
+                  </ul>
+                </li>
+              </li>
+              </ul>
+            </div>
+
           </div>
         </div>
+      </div>
 
         <!-- top navigation -->
         <div class="top_nav">
@@ -142,7 +126,7 @@ require("summary.php");
           </div>
         </div>
         <!-- /top navigation -->
-
+        
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
