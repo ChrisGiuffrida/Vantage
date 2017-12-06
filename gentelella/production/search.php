@@ -1,9 +1,3 @@
-<?php
-require("verify_session.php");
-require("machina.php");
-$array = get_data("student01.cse.nd.edu")
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,6 +27,7 @@ $array = get_data("student01.cse.nd.edu")
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
+    <link href="../build/css/summary.css" rel="stylesheet">
 
     <!-- Google Fonts -->
 	  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
@@ -106,8 +101,7 @@ $array = get_data("student01.cse.nd.edu")
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="images/user.png" alt="">
-                    <?php echo $_SESSION["first"] . " " . $_SESSION["last"]; ?>
-                    <span class=" fa fa-angle-down"></span>
+                    Thomas Krill                    <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <!-- <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i>  Profile</a></li> -->
@@ -126,19 +120,23 @@ $array = get_data("student01.cse.nd.edu")
           </div>
         </div>
         <!-- /top navigation -->
-        
+
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
-                <div class="page-title">
-                  <div class="title_left">
-                    <h1>Search</h1>
+                <!-- <div class="page-title"> -->
+                  <!-- <div class="line"></div> -->
+                  <div class="title"></div>
+                      <h1 class="text-center text-info">
+                          <span class="fa-stack fa-2x">
+                              <i class="fa fa-fw fa-sun-o fa-stack-2x"></i>
+                              <i class="fa fa-fw fa-rebel fa-stack-1x"></i>
+                            </span>
+                      </h1> 
+                      <h1 class="text-center">Vantage Search</h1>
                   </div>
-    
-                  
-                </div>
+                <!-- </div> -->
                 <div class="clearfix"></div>
-                <div style="height:3em"></div>
                 <div class="row">
 
                 </div>
@@ -150,7 +148,7 @@ $array = get_data("student01.cse.nd.edu")
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
-                          <li class="dropdown">
+                          <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="#">Settings 1</a>
@@ -160,7 +158,7 @@ $array = get_data("student01.cse.nd.edu")
                             </ul>
                           </li>
                           <li><a class="close-link"><i class="fa fa-close"></i></a>
-                          </li>
+                          </li> -->
                         </ul>
                         <div class="clearfix"></div>
                       </div>
