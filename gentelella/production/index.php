@@ -73,14 +73,14 @@ function print_ticker($change) {
                 <li><a><i class="fa fa-server"></i>Machines<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="student00.php">student00</a></li>
-                    <li><a href="#">student01</a></li>
-                    <li><a href="#">student02</a></li>
-                    <li><a href="#">student04</a></li>
+                    <li><a href="student01.php">student01</a></li>
+                    <li><a href="student02.php">student02</a></li>
+                    <li><a href="student04.php">student04</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="#">Your Data</a></li>
+                    <li><a href="user.php">Your Data</a></li>
                     <li><a href="#">Search</a></li>
                   </ul>
                 </li>
