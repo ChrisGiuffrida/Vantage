@@ -72,7 +72,7 @@ $array = get_data("student02.cse.nd.edu")
                     <li><a href="search.php">Search</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>
+                <li><a href="report_generator_upload.php"><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>
               </ul>
             </div>
             <div class="menu_section">
