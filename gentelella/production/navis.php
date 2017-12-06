@@ -30,7 +30,10 @@ function print_top() {
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
-
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Dropzone.js -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
     <!-- Google Fonts -->
 	  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">	
   </head>
@@ -70,7 +73,7 @@ function print_top() {
             
                     echo '
                     ">Your Data</a></li>
-                    <li><a href="search.php">Search</a></li>
+                    <li><a href="search.php?bad_netid=False">Search</a></li>
                   </ul>
                 </li>
                 <li><a href="report_generator_upload.php"><i class="fa fa-file-pdf-o"></i>Report Generator<span class="fa fa-minus"></span></a>

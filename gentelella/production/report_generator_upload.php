@@ -3,11 +3,7 @@ require("verify_session.php");
 require("navis.php");
 print_top();
 ?>
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Dropzone.js -->
-    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
-
+    
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -65,10 +61,9 @@ print_top();
           </div>
         </div>
         <!-- /page content -->
-        <!-- jQuery -->
-        <script src="../vendors/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <?php
+print_middle();
+?>
         <!-- FastClick -->
         <script src="../vendors/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
@@ -78,8 +73,6 @@ print_top();
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <?php
-print_middle();
-
+<?php
 print_bottom();
 ?>
