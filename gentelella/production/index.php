@@ -199,7 +199,7 @@ function print_ticker($change) {
             <div class="clearfix"></div>
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel" style="height:600px;">
+                <div class="x_panel" style="height:800px;">
                   <div class="x_title">
                     <h1>Summary</h1>
                     <ul class="nav navbar-right panel_toolbox">
@@ -267,15 +267,16 @@ function print_ticker($change) {
                           <div class="x_content">
                             <div class="">
                               <div class="pricing_features">
-                                <ul class="list-unstyled text-left">
-                                  <li><i class="fa fa-times text-danger"></i> 2 years access <strong> to all storage locations</strong></li>
-                                  <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> storage</li>
-                                  <li><i class="fa fa-check text-success"></i> Limited <strong> download quota</strong></li>
-                                  <li><i class="fa fa-check text-success"></i> <strong>Cash on Delivery</strong></li>
-                                  <li><i class="fa fa-check text-success"></i> All time <strong> updates</strong></li>
-                                  <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> access to all files</li>
-                                  <li><i class="fa fa-times text-danger"></i> <strong>Allowed</strong> to be exclusing per sale</li>
-                                </ul>
+                              <ul class="list-unstyled text-left">
+                                <li  class="summary"><i class="fa fa-users"></i> <?php echo student01["users"]?> users</li>
+                                <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo student01["processes"]?> processes</li>
+                                <li class="summary"><i class="fa fa-sign-in"></i> <?php echo student01["logins"]?> logins</li>
+                                <li class="summary"><i class="fa fa-laptop"></i><?php echo student01["devices"]?> devices</li>
+                                <li class="summary"><i class="fa fa-tasks"></i> <?php echo student01["cpu"]?> Avg. CPU%</li>
+                                <li class="summary"><i class="fa fa-clock-o"></i> <?php echo student01["uptime"]?> days of uptime</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["num_disks"]?> disks</li>
+                                <li class="summary"><i class="fa fa-server"></i> <?php echo student01["memory"]?> Avg. Memory</li>
+                              </ul>
                               </div>
                             </div>
                             <div class="pricing_footer">
@@ -299,13 +300,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li><i class="fa fa-times text-danger"></i> 2 years access <strong> to all storage locations</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> storage</li>
-                                    <li><i class="fa fa-check text-success"></i> Limited <strong> download quota</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> <strong>Cash on Delivery</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> All time <strong> updates</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> access to all files</li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Allowed</strong> to be exclusing per sale</li>
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student02["users"]?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student02["processes"]?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student02["logins"]?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student02["devices"]?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student02["cpu"]?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student02["uptime"]?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["num_disks"]?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student02["memory"]?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
@@ -330,13 +332,14 @@ function print_ticker($change) {
                               <div class="">
                                 <div class="pricing_features">
                                   <ul class="list-unstyled text-left">
-                                    <li><i class="fa fa-times text-danger"></i> 2 years access <strong> to all storage locations</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> storage</li>
-                                    <li><i class="fa fa-check text-success"></i> Limited <strong> download quota</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> <strong>Cash on Delivery</strong></li>
-                                    <li><i class="fa fa-check text-success"></i> All time <strong> updates</strong></li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Unlimited</strong> access to all files</li>
-                                    <li><i class="fa fa-times text-danger"></i> <strong>Allowed</strong> to be exclusing per sale</li>
+                                    <li  class="summary"><i class="fa fa-users"></i> <?php echo $student04["users"]?> users</li>
+                                    <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student04["processes"]?> processes</li>
+                                    <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student04["logins"]?> logins</li>
+                                    <li class="summary"><i class="fa fa-laptop"></i><?php echo $student04["devices"]?> devices</li>
+                                    <li class="summary"><i class="fa fa-tasks"></i> <?php echo $student04["cpu"]?> Avg. CPU%</li>
+                                    <li class="summary"><i class="fa fa-clock-o"></i> <?php echo $student04["uptime"]?> days of uptime</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["num_disks"]?> disks</li>
+                                    <li class="summary"><i class="fa fa-server"></i> <?php echo $student04["memory"]?> Avg. Memory</li>
                                   </ul>
                                 </div>
                               </div>
