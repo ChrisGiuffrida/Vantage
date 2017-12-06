@@ -228,7 +228,7 @@ $data = get_data("pbui");
                       </div>
                       <!-- start of user-activity-graph -->
                       <div class="x_content">
-                        <canvas id="user_processes"></canvas>
+                        <canvas id="user_processes" style="width:100%; height:280px;"></canvas>
                       </div>
                       <!-- <div id="user_processes" style="width:100%; height:280px;"></div> -->
                       <!-- end of user-activity-graph -->
@@ -463,6 +463,9 @@ $data = get_data("pbui");
         //       resize: true
         //     });
         // }
+
+        console.log(<?php echo json_encode($data["user_graph"]); ?>);
+        
         if ($('#user_processes').length ){ 
         var ctx = document.getElementById("user_processes");
         var user_processes = new Chart(ctx, {
