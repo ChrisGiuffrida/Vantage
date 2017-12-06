@@ -3,6 +3,10 @@ require("verify_session.php");
 require("navis.php");
 print_top();
 ?>
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Dropzone.js -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -45,8 +49,15 @@ print_top();
                     <form action="form_upload.html" class="dropzone"></form>
                     <br />
                     <br />
-                    <br />
-                    <br />
+                    <form id="search" method="GET" action="report.php" data-parsley-validate class="form-horizontal form-label-left">
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-9">
+                          <button type="submit" class="btn btn-lg btn-success">
+                            <i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Generate Report
+                          </button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -54,6 +65,19 @@ print_top();
           </div>
         </div>
         <!-- /page content -->
+        <!-- jQuery -->
+        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendors/nprogress/nprogress.js"></script>
+        <!-- Dropzone.js -->
+        <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+
+        <!-- Custom Theme Scripts -->
+        <script src="../build/js/custom.min.js"></script>
         <?php
 print_middle();
 

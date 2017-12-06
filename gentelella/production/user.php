@@ -4,6 +4,13 @@ require("navis.php");
 require("user_data.php");
 $data = get_data($_GET["netid"]);
 print_top();
+
+function potentially_print_edit_button() {
+
+  if ($_GET["netid"] == $_SESSION["netid"]) {
+    echo '<a class="btn btn-success" href="settings.php"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a></br>';
+  }
+}
 ?>
 
 
@@ -64,9 +71,9 @@ print_top();
                           <a href="mailto:<?php echo $data["demographics"][0][4]?>@nd.edu" target="_blank"> <?php echo $data["demographics"][0][4]?>@nd.edu</a>
                         </li>
                       </ul>
-
-                      <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
-                      <br />
+                      <?php
+                      potentially_print_edit_button();
+                      ?>
 
                       <!-- start skills -->
                       <hr></hr>

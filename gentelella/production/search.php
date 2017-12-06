@@ -2,6 +2,17 @@
 require("verify_session.php");
 require("navis.php");
 print_top();
+
+function potentially_print_err_msg() {
+  if ($_GET["bad_netid"] == "True") {
+    echo '
+      <div class="alert alert-danger">
+        <strong>Try again!</strong> We don&rsquo;t have data on that netid.
+      </div>
+    ';
+  }
+}
+
 ?>
         <!-- page content -->
         <div class="right_col" role="main">
@@ -46,13 +57,13 @@ print_top();
                       </div>
                       <div class="x_content">
                         <br />
-                        <form id="search" method="GET" action="user.php" data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="search" method="GET" action="validus.php" data-parsley-validate class="form-horizontal form-label-left">
     
                           <div class="form-group">
                             <label class="label-lg control-label col-md-3 col-sm-3 col-xs-12" for="netid">NetID <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" name="netid" required="required" class="input-lg form-control col-md-7 col-xs-12">
+                              <input data-validate-length-range="0,8" type="text" name="netid" required="required" class="input-lg form-control col-md-7 col-xs-12">
                             </div>
                           </div>
                           <div class="form-group">
@@ -63,6 +74,7 @@ print_top();
                             </div>
                           </div>
                         </form>
+                        <?php potentially_print_err_msg();?>
                       </div>
                     </div>
                   </div>
