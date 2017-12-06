@@ -29,7 +29,7 @@
 
         // Most Active Day
         require("connect.php");
-        if ($stmt = mysqli_prepare($link, "SELECT count(*) from Processes where netid = ? group by dayname(date) order by count(*) desc limit 1;")) {
+        if ($stmt = mysqli_prepare($link, "SELECT dayname(date) from Processes where netid = ? group by dayname(date) order by count(*) desc limit 1;")) {
             $stmt->bind_param('s', $netid);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_bind_result($stmt, $most_active);
