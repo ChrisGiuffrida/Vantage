@@ -450,6 +450,9 @@ $data = get_data("pbui");
         //       resize: true
         //     });
         // }        
+
+        console.log(<?php echo json_encode($data["user_graph"]); ?>);
+
         if ($('#user_processes').length ){ 
         var ctx = document.getElementById("user_processes");
         var user_processes = new Chart(ctx, {
