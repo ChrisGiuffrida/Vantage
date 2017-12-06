@@ -192,19 +192,10 @@ function print_ticker($change) {
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Pricing Tables</h3>
+                <h3>Summary</h3>
               </div>
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
-                </div>
-              </div>
+            
             </div>
 
             <div class="clearfix"></div>
@@ -213,7 +204,7 @@ function print_ticker($change) {
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel" style="height:600px;">
                   <div class="x_title">
-                    <h2>Pricing Tables Design</h2>
+                    <h2>Overview of Machines</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -241,8 +232,8 @@ function print_ticker($change) {
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="pricing">
                             <div class="title">
-                              <h2>Tally Box Design</h2>
-                              <h1>free</h1>
+                              <h2></h2>
+                              <h1>student00</h1>
                             </div>
                             <div class="x_content">
                               <div class="">
@@ -259,9 +250,8 @@ function print_ticker($change) {
                                 </div>
                               </div>
                               <div class="pricing_footer">
-                                <a href="javascript:void(0);" class="btn btn-success btn-block" role="button">Download <span> now!</span></a>
+                                <a href="javascript:void(0);" class="btn btn-success btn-block" role="button">More Info <span> now!</span></a>
                                 <p>
-                                  <a href="javascript:void(0);">Sign up</a>
                                 </p>
                               </div>
                             </div>
