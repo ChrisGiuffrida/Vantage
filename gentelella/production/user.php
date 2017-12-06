@@ -203,15 +203,15 @@ $data = get_data("pbui");
                       <ul class="list-unstyled user_data">
                         <li>
                           <h4>Favorite Machine:</h4>
-                            <p><?php echo data["favorite"]?></p>
+                            <p><?php echo data["favorite"]; ?></p>
                         </li>
                         <li>
                           <h4>Most Run Process:</h4>
-                            <code><?php echo data["most_run"]?></code>
+                            <code><?php echo data["most_run"]; ?></code>
                         </li>
                         <li>
                           <h4>Most Active Day:</h4>
-                            <p><?php echo data["most_active"]?></p>
+                            <p><?php echo data["most_active"]; ?></p>
                         </li>
                       </ul>
                       <!-- end of skills -->
