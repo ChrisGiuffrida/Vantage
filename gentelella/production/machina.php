@@ -228,12 +228,12 @@
         $array["weekcpugraph"] = $weekcpu;
 
         require("connect.php");
-        if ($stmt = mysqli_prepare($link, "SELECT status, count(*) from(select Processes.netid, Processes.date, Domers.status from Processes  inner join Domers on Processes.netid=Domers.netid  where date < subdate(curdate(), 1) and status!='Graduate-' and machine = ?)a group by status order by status;")) {
+        if ($stmt = mysqli_prepare($link, "SELECT coalesce(cnt, 0) from (select * from Years) a left join (select status, count(*) as cnt from(select Processes.netid, Processes.date, Domers.status from Processes  inner join Domers on Processes.netid=Domers.netid  where date < subdate(curdate(), 1)  and machine = ?)a group by status)b on a.year = b.status;")) {
             $stmt->bind_param('s', $stdnt_mchn);
             mysqli_stmt_execute($stmt);
             $process = $stmt->get_result();
             while($tuple = mysqli_fetch_array($process, MYSQL_NUM)) {
-                $processes_donut[] = $tuple[1];
+                $processes_donut[] = $tuple;
             }
             $stmt->close();
         }
