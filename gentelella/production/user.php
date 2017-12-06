@@ -256,38 +256,38 @@ $data = get_data("pbui");
                               <tbody>
                                 <tr>
                                   <td>1</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_logins"][0][0]; ?></td>
+                                  <td><?php echo $data["recent_logins"][0][1]; ?></td>
+                                  <td><?php echo $data["recent_logins"][0][2]; ?></td>
+                                  <td><?php echo $data["recent_logins"][0][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>2</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_logins"][1][0]; ?></td>
+                                  <td><?php echo $data["recent_logins"][1][1]; ?></td>
+                                  <td><?php echo $data["recent_logins"][1][2]; ?></td>
+                                  <td><?php echo $data["recent_logins"][1][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>3</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_logins"][2][0]; ?></td>
+                                  <td><?php echo $data["recent_logins"][2][1]; ?></td>
+                                  <td><?php echo $data["recent_logins"][2][2]; ?></td>
+                                  <td><?php echo $data["recent_logins"][2][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>4</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_logins"][3][0]; ?></td>
+                                  <td><?php echo $data["recent_logins"][3][1]; ?></td>
+                                  <td><?php echo $data["recent_logins"][3][2]; ?></td>
+                                  <td><?php echo $data["recent_logins"][3][3]; ?></td>
                                 </tr>
                                 <tr>
                                   <td>5</td>
-                                  <td>11/2/2017</td>
-                                  <td>3:07pm</td>
-                                  <td>student00</td>
-                                  <td>106.76.567</td>
+                                  <td><?php echo $data["recent_logins"][4][0]; ?></td>
+                                  <td><?php echo $data["recent_logins"][4][1]; ?></td>
+                                  <td><?php echo $data["recent_logins"][4][2]; ?></td>
+                                  <td><?php echo $data["recent_logins"][4][3]; ?></td>
                                 </tr>
                               </tbody>
                             </table>
