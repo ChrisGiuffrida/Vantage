@@ -199,7 +199,7 @@ function print_ticker($change) {
             <div class="clearfix"></div>
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel" style="height:800px;">
+                <div class="x_panel" style="height:700px;">
                   <div class="x_title">
                     <h1>Summary</h1>
                     <ul class="nav navbar-right panel_toolbox">
@@ -267,7 +267,7 @@ function print_ticker($change) {
                           <div class="x_content">
                             <div class="">
                               <div class="pricing_features">
-                              <ul class="list-unstyled text-center">
+                              <ul class="list-unstyled text-left">
                                 <li  class="summary"><i class="fa fa-users"></i> <?php echo $student01["users"]; ?> users</li>
                                 <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student01["processes"];?> processes</li>
                                 <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student01["logins"];?> logins</li>
@@ -299,7 +299,7 @@ function print_ticker($change) {
                             <div class="x_content">
                               <div class="">
                                 <div class="pricing_features">
-                                  <ul class="list-unstyled text-center">
+                                  <ul class="list-unstyled text-left">
                                     <li  class="summary"><i class="fa fa-users"></i> <?php echo $student02["users"];?> users</li>
                                     <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student02["processes"];?> processes</li>
                                     <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student02["logins"];?> logins</li>
@@ -331,7 +331,7 @@ function print_ticker($change) {
                             <div class="x_content">
                               <div class="">
                                 <div class="pricing_features">
-                                  <ul class="list-unstyled text-center">
+                                  <ul class="list-unstyled text-left">
                                     <li  class="summary"><i class="fa fa-users"></i> <?php echo $student04["users"];?> users</li>
                                     <li class="summary"><i class="fa fa-file-code-o"></i> <?php echo $student04["processes"];?> processes</li>
                                     <li class="summary"><i class="fa fa-sign-in"></i> <?php echo $student04["logins"];?> logins</li>
