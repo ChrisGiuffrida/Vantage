@@ -780,13 +780,13 @@ $array = get_data("student01.cse.nd.edu")
         }]
       };
 
-        var canvasDoughnut = new Chart(ctx, {
-          type: 'doughnut',
-          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-          data: data
-        });
-       
-      } 
+      var canvasDoughnut = new Chart(ctx, {
+        type: 'doughnut',
+        tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+        data: data
+      });
+     
+    }
     
     if ($('#bar_logins').length ){ 
         var ctx = document.getElementById("bar_logins");
