@@ -334,7 +334,7 @@ function print_ticker($change) {
                                 </div>
                               </div>
                               <div class="pricing_footer">
-                                <a href="student00.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
+                                <a href="student04.php" class="btn btn-success btn-block" role="button">More Info <span></span></a>
                                 <p>
                                 </p>
                               </div>
