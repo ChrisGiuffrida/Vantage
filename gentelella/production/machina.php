@@ -216,7 +216,6 @@
         $array["alltimecpugraph"] = $alltimecpu;
 
         require("connect.php");
-        $weekcpu = array();
         if ($stmt = mysqli_prepare($link, "select dayofweek(timestamp)weekday, avg(cpu_percentage) FROM MachineSnapshots WHERE name = ? and date(timestamp) > subdate(curdate(), 7) group by weekday")) {
             $stmt->bind_param('s', $stdnt_mchn);
             mysqli_stmt_execute($stmt);
@@ -227,6 +226,18 @@
             $stmt->close();
         }
         $array["weekcpugraph"] = $weekcpu;
+
+        require("connect.php");
+        if ($stmt = mysqli_prepare($link, "SELECT status, count(*) from(select Processes.netid, Processes.date, Domers.status from Processes  inner join Domers on Processes.netid=Domers.netid  where date < subdate(curdate(), 1) and status!='Graduate-' and machine = ?)a group by status order by status;")) {
+            $stmt->bind_param('s', $stdnt_mchn);
+            mysqli_stmt_execute($stmt);
+            $process = $stmt->get_result();
+            while($tuple = mysqli_fetch_array($process, MYSQL_NUM)) {
+                $processes_donut[] = $tuple[1];
+            }
+            $stmt->close();
+        }
+        $array["processes_donut"] = $processes_donut;
         return $array;
     }
 ?>
