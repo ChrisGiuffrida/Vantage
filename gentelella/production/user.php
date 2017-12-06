@@ -227,7 +227,7 @@ $data = get_data("pbui");
                         </div>
                       </div>
                       <!-- start of user-activity-graph -->
-                        <canvas id="user_processes" style="width:100%; height:140px;"></canvas>
+                        <canvas id="user_processes" style="width:100%; height:50px;"></canvas>
                       <!-- <div id="user_processes" style="width:100%; height:280px;"></div> -->
                       <!-- end of user-activity-graph -->
 
