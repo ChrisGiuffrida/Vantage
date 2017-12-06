@@ -2,7 +2,6 @@
 require("navis.php");
 print_top();
 ?>
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
