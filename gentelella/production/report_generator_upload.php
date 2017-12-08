@@ -41,19 +41,11 @@ print_top();
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p>Upload a CSV file with netids to generate a report.  Drag and drop a file or click in the box to upload.</p>
-                    <form action="form_upload.html" class="dropzone"></form>
+                    <p>Upload a CSV file with netids to generate a report. Drag and drop a file or click in the box to upload.</p>
+                    <form action="upload.php" class="dropzone" id="dz"></form>
                     <br />
                     <br />
-                    <form id="search" method="GET" action="report.php" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-9">
-                          <button type="submit" class="btn btn-lg btn-success">
-                            <i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Generate Report
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+                    <div id="spinner" class="text-center"></div>
                   </div>
                 </div>
               </div>
@@ -73,6 +65,19 @@ print_middle();
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
+
+
+        <script>
+          $(function() {
+          var myDropzone = new Dropzone("#dz"); // this will create instance of Dropzone on the #dz element
+
+          myDropzone.on("addedfile", function(file) {
+            $("#spinner").append('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
+            location.href = './report.php';  // this will redirect you when the file is added to dropzone
+            });
+          });
+        
+        </script>
 <?php
 print_bottom();
 ?>

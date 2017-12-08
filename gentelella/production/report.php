@@ -1,6 +1,10 @@
 <?php
 require("verify_session.php");
+require("csv-lib.php");
 require("navis.php");
+$netids = parse_csv();
+$data = get_stats($netids);
+
 print_top();
 ?>
 
@@ -12,28 +16,28 @@ print_top();
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-users"></i></div>
-                <div class="count">1234</div>
+                <div class="count"><?php echo $data["programs"];?></div>
                 <h3>Unique Programs</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-file-code-o"></i></div>
-                <div class="count">521666</div>
+                <div class="count"><?php echo $data["processes"];?></div>
                 <h3>Processes</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-sign-in"></i></div>
-                <div class="count">23225</div>
+                <div class="count"><?php echo $data["logins"];?></div>
                 <h3>Logins</h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><i class="fa fa-laptop"></i></div>
-                <div class="count">35325</div>
+                <div class="count"><?php echo $data["devices"];?></div>
                 <h3>Devices</h3>
               </div>
             </div>
@@ -53,7 +57,7 @@ print_top();
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Individual Statistics <small>Run in Last Week on student00</small></h2>
+                      <h2>Individual Statistics</h2>
                       <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -72,17 +76,23 @@ print_top();
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">10</th>
-                            <td>sadams9</td>
-                            <td>12-6-17</td>
-                            <td>9:02:47</td>
-                            <td>student04</td>
-                            <td>17</td>
-                            <td>258</td>
-                            <td>./cnn 28</td>
-                            <td>Thursday</td>
-                          </tr>
+                            <?php
+                              $counter = 1;
+                              foreach($netids as $netid) {
+                                echo '<tr>';
+                                echo '<th scope="row">' . $counter . '</th>';
+                                echo '<td>' . $netid . '</td>';
+                                echo '<td>' . $data[$netid]["recent_login_time"] . '</td>';
+                                echo '<td>' . $data[$netid]["recent_login_date"] . '</td>';
+                                echo '<td>' . $data[$netid]["recent_login_machine"] . '</td>';
+                                echo '<td>' . $data[$netid]["logins"] . '</td>';
+                                echo '<td>' . $data[$netid]["processes"] . '</td>';
+                                echo '<td>' . $data[$netid]["most_run"] . '</td>';
+                                echo '<td>' . $data[$netid]["most_active"] . '</td>';
+                                echo '</tr>';
+                                $counter += 1;
+                              }
+                            ?>
                         </tbody>
                       </table>
                     </div>

@@ -131,41 +131,18 @@ function potentially_print_edit_button() {
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td><?php echo $data["recent_logins"][0][0]; ?></td>
-                                  <td><?php echo $data["recent_logins"][0][1]; ?></td>
-                                  <td><?php echo $data["recent_logins"][0][2]; ?></td>
-                                  <td><?php echo $data["recent_logins"][0][3]; ?></td>
-                                </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td><?php echo $data["recent_logins"][1][0]; ?></td>
-                                  <td><?php echo $data["recent_logins"][1][1]; ?></td>
-                                  <td><?php echo $data["recent_logins"][1][2]; ?></td>
-                                  <td><?php echo $data["recent_logins"][1][3]; ?></td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td><?php echo $data["recent_logins"][2][0]; ?></td>
-                                  <td><?php echo $data["recent_logins"][2][1]; ?></td>
-                                  <td><?php echo $data["recent_logins"][2][2]; ?></td>
-                                  <td><?php echo $data["recent_logins"][2][3]; ?></td>
-                                </tr>
-                                <tr>
-                                  <td>4</td>
-                                  <td><?php echo $data["recent_logins"][3][0]; ?></td>
-                                  <td><?php echo $data["recent_logins"][3][1]; ?></td>
-                                  <td><?php echo $data["recent_logins"][3][2]; ?></td>
-                                  <td><?php echo $data["recent_logins"][3][3]; ?></td>
-                                </tr>
-                                <tr>
-                                  <td>5</td>
-                                  <td><?php echo $data["recent_logins"][4][0]; ?></td>
-                                  <td><?php echo $data["recent_logins"][4][1]; ?></td>
-                                  <td><?php echo $data["recent_logins"][4][2]; ?></td>
-                                  <td><?php echo $data["recent_logins"][4][3]; ?></td>
-                                </tr>
+                                <?php
+                                  for ($i = 0; $i < count($data["recent_logins"]); $i++) {
+                                    echo '<tr>';
+                                    $i_1 = $i + 1;
+                                    echo '  <td>' . $i_1 . '</td>';
+                                    echo '  <td>' . $data["recent_logins"][$i][0] . '</td>';
+                                    echo '  <td>' . $data["recent_logins"][$i][1] . '</td>';
+                                    echo '  <td>' . $data["recent_logins"][$i][2] . '</td>';
+                                    echo '  <td>' . $data["recent_logins"][$i][3] . '</td>';
+                                    echo '</tr>';
+                                  }
+                                ?>
                               </tbody>
                             </table>
                             <!-- end user projects -->
