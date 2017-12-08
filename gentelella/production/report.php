@@ -62,112 +62,24 @@ print_top();
                           <tr>
                             <th>#</th>
                             <th>NetID</th>
-                            <th>Number of Logins Today</th>
-                            <th>Number of Processes Run Today</th>
-                            <th>Student Machine</th>
                             <th>Last Login Time</th>
+                            <th>Last Login Date</th>
+                            <th>Last Machine Used</th>
+                            <th># Logins Today</th>
+                            <th># Processes Run Today</th>
                             <th>Most Popular Program Today</th>
                             <th>Most Active Day</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <th scope="row">1</th>
-                            <td>tkrill</td>
-                            <td>12</td>
-                            <td>321</td>
-                            <td>student00</td>
-                            <td>11-7-17</td>
-                            <td>ps aux</td>
-                            <td>Sunday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>cgiuffri</td>
-                            <td>15</td>
-                            <td>456</td>
-                            <td>student01</td>
-                            <td>12-5-17</td>
-                            <td>./db</td>
-                            <td>Monday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>bfite</td>
-                            <td>23</td>
-                            <td>173</td>
-                            <td>student04</td>
-                            <td>12-4-17</td>
-                            <td>./pg fifo 9</td>
-                            <td>Monday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>aluc</td>
-                            <td>7</td>
-                            <td>99</td>
-                            <td>student01</td>
-                            <td>12-3-17</td>
-                            <td>./who</td>
-                            <td>Wednesday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td>pfalvey</td>
-                            <td>6</td>
-                            <td>501</td>
-                            <td>student00</td>
-                            <td>12-6-17</td>
-                            <td>./program.py</td>
-                            <td>Tuesday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">6</th>
-                            <td>rshultz</td>
-                            <td>8</td>
-                            <td>401</td>
-                            <td>student02</td>
-                            <td>12-9-17</td>
-                            <td>ps aux</td>
-                            <td>Sunday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">7</th>
-                            <td>showley1</td>
-                            <td>3</td>
-                            <td>50</td>
-                            <td>student02</td>
-                            <td>12-5-17</td>
-                            <td>who</td>
-                            <td>Sunday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">8</th>
-                            <td>asmith</td>
-                            <td>6</td>
-                            <td>34</td>
-                            <td>student04</td>
-                            <td>12-3-17</td>
-                            <td>./fractals</td>
-                            <td>Sunday</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">9</th>
-                            <td>nribera</td>
-                            <td>5</td>
-                            <td>101</td>
-                            <td>student01</td>
-                            <td>12-5-17</td>
-                            <td>sleep 1</td>
-                            <td>Sunday</td>
-                          </tr>
-                          <tr>
                             <th scope="row">10</th>
                             <td>sadams9</td>
+                            <td>12-6-17</td>
+                            <td>9:02:47</td>
+                            <td>student04</td>
                             <td>17</td>
                             <td>258</td>
-                            <td>student04</td>
-                            <td>12-6-17</td>
                             <td>./cnn 28</td>
                             <td>Thursday</td>
                           </tr>
