@@ -187,7 +187,7 @@ print_top();
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="x_panel">
                       <div class="x_title">
-                        <h2>Process Leaderboard <small>Run in Last Week on student00</small></h2>
+                        <h2>Process Leaderboard <small>Last Week on student00</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
@@ -274,7 +274,7 @@ print_top();
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Login Leaderboard <small>Run in Last Week on student00</small></h2>
+                            <h2>Login Leaderboard <small>Last Week on student00</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -366,7 +366,7 @@ print_top();
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="x_panel">
                       <div class="x_title">
-                        <h2>Most Popular Processes <small>Run in Last Week on student00</small></h2>
+                        <h2>Most Popular Processes <small>Last Week on student00</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                           <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                           </li>
@@ -453,7 +453,7 @@ print_top();
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Leaderboard <small>Run in Last Week on student00</small></h2>
+                            <h2>Leaderboard <small>Last Week on student00</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                               </li>
@@ -561,7 +561,7 @@ print_top();
             backgroundColor: "#26B99A",
             data: <?php echo json_encode($array["avgprocgraph"]); ?>
             }, {
-            label: 'Today',
+            label: 'This Week',
             backgroundColor: "#03586A",
             data: <?php echo json_encode($array["weekprocgraph"]); ?>
             }]
@@ -629,7 +629,7 @@ print_top();
             backgroundColor: "#26B99A",
             data: <?php echo json_encode($array["avglogingraph"]); ?>
             }, {
-            label: 'Today',
+            label: 'This Week',
             backgroundColor: "#03586A",
             data: <?php echo json_encode($array["weeklogingraph"]); ?>
             }]

@@ -98,7 +98,7 @@ function potentially_print_edit_button() {
 
                       <div class="profile_title">
                         <div class="col-md-6">
-                          <h2>User Activity Report</h2>
+                          <h2>Number of Processes per Day <small>(Last Week)</small></h2>
                         </div>
                         <div class="col-md-6">
                         </div>
